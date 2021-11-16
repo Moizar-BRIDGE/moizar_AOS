@@ -1,0 +1,19 @@
+<vector android:height="64dp" android:viewportHeight="32"
+    android:viewportWidth="32" android:width="64dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M15.3233,17.5641C12.7449,17.5641 10.543,17.954 10.543,19.5153C10.543,21.0765 12.731,21.4803 15.3233,21.4803C17.9018,21.4803 20.103,21.0899 20.103,19.5292C20.103,17.9686 17.9157,17.5641 15.3233,17.5641Z"
+        android:strokeColor="#2700F8" android:strokeLineCap="round"
+        android:strokeLineJoin="round" android:strokeWidth="1.5"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M15.3234,15.3374C17.0154,15.3374 18.3869,13.9653 18.3869,12.2733C18.3869,10.5812 17.0154,9.2098 15.3234,9.2098C13.6313,9.2098 12.2592,10.5812 12.2592,12.2733C12.2535,13.9596 13.6161,15.3317 15.3018,15.3374H15.3234Z"
+        android:strokeColor="#2700F8" android:strokeLineCap="round"
+        android:strokeLineJoin="round" android:strokeWidth="1.42857"/>
+    <group>
+        <clip-path android:fillType="evenOdd" android:pathData="M2.6666,2.6666H28.6357V28.636H2.6666V2.6666Z"/>
+        <path android:fillColor="#2700F8" android:fillType="evenOdd" android:pathData="M15.6518,4.6666C9.5945,4.6666 4.6665,9.5933 4.6665,15.6506C4.6665,21.708 9.5945,26.636 15.6518,26.636C21.7078,26.636 26.6358,21.708 26.6358,15.6506C26.6358,9.5933 21.7078,4.6666 15.6518,4.6666M15.6518,28.636C8.4918,28.636 2.6664,22.8106 2.6664,15.6506C2.6664,8.4906 8.4918,2.6666 15.6518,2.6666C22.8118,2.6666 28.6358,8.4906 28.6358,15.6506C28.6358,22.8106 22.8118,28.636 15.6518,28.636"/>
+    </group>
+    <group>
+        <clip-path android:fillType="evenOdd" android:pathData="M22.9866,23.6093H29.6853V30.2956H22.9866V23.6093Z"/>
+        <path android:fillColor="#2700F8" android:fillType="evenOdd" android:pathData="M28.6856,30.2956C28.4309,30.2956 28.1749,30.1983 27.9789,30.0036L23.2802,25.3183C22.8896,24.9276 22.8882,24.2943 23.2789,23.9036C23.6682,23.5103 24.3016,23.5129 24.6936,23.9009L29.3922,28.5876C29.7829,28.9783 29.7842,29.6103 29.3936,30.0009C29.1989,30.1983 28.9416,30.2956 28.6856,30.2956Z"/>
+    </group>
+</vector>

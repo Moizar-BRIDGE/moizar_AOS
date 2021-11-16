@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_favorites"
+        android:id="@+id/action_main"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Page1"
+        android:icon="@drawable/ic_tab_teams"
+        android:title="home"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_schedules"
+        android:id="@+id/action_teams"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Page2"
+        android:icon="@drawable/ic_tab_teams"
+        android:title="teams"
         app:showAsAction="ifRoom" />
 
     <item
@@ -22,16 +22,16 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_music"
+        android:id="@+id/action_peoples"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Page3"
+        android:icon="@drawable/ic_tab_peoples"
+        android:title="peoples"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_schedules1"
+        android:id="@+id/action_competition"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Page4"
+        android:icon="@drawable/ic_tab_competition"
+        android:title="competition"
         app:showAsAction="ifRoom" />
 </menu>
