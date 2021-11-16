@@ -17,7 +17,7 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:enabled="true"
+        android:enabled="false"
         android:title=""
         app:showAsAction="ifRoom" />
 

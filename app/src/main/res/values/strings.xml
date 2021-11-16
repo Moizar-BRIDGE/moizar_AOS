@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Moizar</string>
-<<<<<<< HEAD
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-=======
+
     <string name="firebase_web_client_id">80704312680-pad79em86bjs37mkbe582m5dctftrj2d.apps.googleusercontent.com</string>
 
->>>>>>> b7d95ff8879e98a9a3b17f699b2795b049a2a4be
+
 </resources>
