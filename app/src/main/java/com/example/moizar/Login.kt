@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 
 class Login : AppCompatActivity() {
+    val name : String = "오래영 벌래 큿!"
     var auth: FirebaseAuth? = null
     val GOOGLE_REQUEST_CODE = 99
     val TAG = "googleLogin"
