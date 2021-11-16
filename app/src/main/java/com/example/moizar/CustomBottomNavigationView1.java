@@ -1,5 +1,6 @@
 package com.example.moizar;
 
+import android.accessibilityservice.GestureDescription;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -16,6 +17,7 @@ public class CustomBottomNavigationView1 extends BottomNavigationView {
 
     private Path mPath;
     private Paint mPaint;
+    private Paint mStrokePaint;
 
     // the coordinates of the first curve
     private final Point mFirstCurveStartPoint = new Point();
@@ -48,8 +50,13 @@ public class CustomBottomNavigationView1 extends BottomNavigationView {
     private void init() {
         mPath = new Path();
         mPaint = new Paint();
-        mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
-        mPaint.setColor(ContextCompat.getColor(getContext(), R.color.design_default_color_secondary));
+        mStrokePaint = new Paint();
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setColor(ContextCompat.getColor(getContext(), R.color.white));
+        mStrokePaint.setStyle(Paint.Style.STROKE);
+        mStrokePaint.setColor(ContextCompat.getColor(getContext(), R.color.grey_color));
+        mStrokePaint.setStrokeWidth(1);
+        mStrokePaint.setStrokeCap(Paint.Cap.ROUND);
         setBackgroundColor(Color.TRANSPARENT);
     }
 
@@ -69,12 +76,12 @@ public class CustomBottomNavigationView1 extends BottomNavigationView {
         // the coordinates (x,y) of the start point before curve
         /** the CURVE_CIRCLE_RADIUS represent the radius of the fab button */
         int CURVE_CIRCLE_RADIUS = 128 / 2;
-        mFirstCurveStartPoint.set((mNavigationBarWidth / 2) - (CURVE_CIRCLE_RADIUS * 2) - (CURVE_CIRCLE_RADIUS / 3), 0);
+        mFirstCurveStartPoint.set((mNavigationBarWidth / 2) - ((int)(CURVE_CIRCLE_RADIUS * 2.5)) - (CURVE_CIRCLE_RADIUS / 3), 0);
         // the coordinates (x,y) of the end point after curve
         mFirstCurveEndPoint.set(mNavigationBarWidth / 2, CURVE_CIRCLE_RADIUS + (CURVE_CIRCLE_RADIUS / 4));
         // same thing for the second curve
         mSecondCurveStartPoint = mFirstCurveEndPoint;
-        mSecondCurveEndPoint.set((mNavigationBarWidth / 2) + (CURVE_CIRCLE_RADIUS * 2) + (CURVE_CIRCLE_RADIUS / 3), 0);
+        mSecondCurveEndPoint.set((mNavigationBarWidth / 2) + ((int)(CURVE_CIRCLE_RADIUS * 2.5)) + (CURVE_CIRCLE_RADIUS / 3), 0);
 
         // the coordinates (x,y)  of the 1st control point on a cubic curve
         mFirstCurveControlPoint1.set(mFirstCurveStartPoint.x + CURVE_CIRCLE_RADIUS + (CURVE_CIRCLE_RADIUS / 4), mFirstCurveStartPoint.y);
@@ -106,5 +113,6 @@ public class CustomBottomNavigationView1 extends BottomNavigationView {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawPath(mPath, mPaint);
+        canvas.drawPath(mPath, mStrokePaint);
     }
 }
