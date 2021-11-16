@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "80704312680",
+    "project_id": "moizar-92a9f",
+    "storage_bucket": "moizar-92a9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80704312680:android:7983e763f6d5b4ac7a72dd",
+        "android_client_info": {
+          "package_name": "com.example.moizar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "80704312680-pad79em86bjs37mkbe582m5dctftrj2d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCroHZYBKAPjARPQwTe2G0Ci2MTZZx_MjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "80704312680-pad79em86bjs37mkbe582m5dctftrj2d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
