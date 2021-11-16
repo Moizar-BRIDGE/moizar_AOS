@@ -71,8 +71,11 @@ class Login : AppCompatActivity() {
             }
     }
     private fun loginSuccess(){
-        val intent = Intent(this,MainActivity::class.java)
-        startActivity(intent)
-        finish()
+        googleSignInClient.signOut().addOnCompleteListener{
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 }
