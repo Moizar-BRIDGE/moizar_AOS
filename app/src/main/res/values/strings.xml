@@ -6,4 +6,7 @@
 
     <string name="firebase_web_client_id">80704312680-pad79em86bjs37mkbe582m5dctftrj2d.apps.googleusercontent.com</string>
 
+    <string name="facebook_app_id">888676515117511</string>
+    <string name="fb_login_protocol_scheme">fb888676515117511</string>
+
 </resources>
