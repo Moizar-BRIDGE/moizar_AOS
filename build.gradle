@@ -4,6 +4,7 @@ buildscript {
     ext.springBootVersion = '2.0.4.RELEASE'
     ext.anko_version='0.10.4'
     repositories {
+        jcenter()
         google()
         mavenCentral()
     }
