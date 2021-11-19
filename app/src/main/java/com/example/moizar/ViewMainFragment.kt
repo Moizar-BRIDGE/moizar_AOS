@@ -35,6 +35,7 @@ class ViewMainFragment : Fragment() {
         profileList_recycler_view.adapter = listAdapter
         profileList_recycler_view.layoutManager =
             LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
+
     }
 
     fun createFakeProfileList(
