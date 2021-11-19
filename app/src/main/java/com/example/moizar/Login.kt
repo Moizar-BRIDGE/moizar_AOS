@@ -42,6 +42,7 @@ class Login : AppCompatActivity() {
         auth = Firebase.auth
         // [END initialize_auth]
         googleSignInBtn.setOnClickListener {
+            Log.d(TAG, "push")
             signIn()
         }
     }
