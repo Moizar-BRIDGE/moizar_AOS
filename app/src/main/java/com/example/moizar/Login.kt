@@ -52,7 +52,6 @@ class Login : AppCompatActivity() {
         auth = Firebase.auth
         // [END initialize_auth]
         callbackManager = CallbackManager.Factory.create()
-
         buttonFacebookLogin.setReadPermissions("email", "public_profile")
         buttonFacebookLogin.registerCallback(callbackManager, object :
             FacebookCallback<LoginResult> {
@@ -134,6 +133,22 @@ class Login : AppCompatActivity() {
 
     private fun updateUI(user: FirebaseUser?) {
 
+        if (user != null) {
+            Log.d("123","${user.email}")
+            val email = user.email!!.split("@")
+            if(email[1] == "gmail.com"){
+                val intent = Intent(this, Logout::class.java)
+                intent.putExtra("Login way", "Google");
+                startActivity(intent)
+                finish()
+            }
+            else{
+                val intent = Intent(this, Logout::class.java)
+                intent.putExtra("Login way", "Facebook");
+                startActivity(intent)
+                finish()
+            }
+        }
     }
 
     companion object {
@@ -150,7 +165,10 @@ class Login : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
-                    logout()
+                    val intent = Intent(this, Logout::class.java)
+                    intent.putExtra("Login way", "Facebook");
+                    startActivity(intent)
+                    finish()
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithCredential:failure", task.exception)
@@ -163,16 +181,9 @@ class Login : AppCompatActivity() {
 
     // [END auth_with_facebook]
     private fun loginSuccess() {
-        googleSignInClient.signOut().addOnCompleteListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Logout::class.java)
+            intent.putExtra("Login way", "Google");
             startActivity(intent)
             finish()
-        }
-    }
-    private fun logout() {
-        LoginManager.getInstance().logOut()
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-        finish()
     }
 }
