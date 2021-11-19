@@ -16,5 +16,5 @@
     <color name="menu_unselected">#C4C4C4</color>
     <color name="floatingBtn_color">#FEC243</color>
 
-    <color name="m2enu_unselected">@color/menu_selector_color</color>
+    <color name="btn_color">#F9F9FB</color>
 </resources>
