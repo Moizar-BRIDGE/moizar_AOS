@@ -2,80 +2,114 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="150dp"
-
-    android:layout_height="130dp"
+    android:layout_width="160dp"
+    android:layout_height="150dp"
     android:layout_marginLeft="15dp"
     android:layout_marginTop="5dp"
     android:layout_marginRight="15dp"
     android:layout_marginBottom="5dp"
-    android:backgroundTint="@color/btn_color"
+    android:backgroundTint="@color/white"
     android:clickable="true"
+    android:focusable="true"
     app:cardCornerRadius="20dp"
     app:cardElevation="3dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp">
+        android:paddingLeft="8dp"
 
-        <ImageView
+        android:paddingBottom="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="8dp"
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/profile_test_img"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/like_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_moizar_logo" />
+            app:lottie_autoPlay="false"
+            app:lottie_fileName="4837-heart.json"
+            app:lottie_loop="false" />
 
         <TextView
-            android:id="@+id/name"
-            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Title goes here"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="7dp"
+
+            android:fontFamily="@font/notosans_regular"
+            android:includeFontPadding="false"
+            android:text="Name"
+            android:textColor="#6A6A6A"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+        <LinearLayout
+            android:id="@+id/main_part"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/profile_mainpart_chip"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/user_name">
+
+            <TextView
+                android:id="@+id/card_subtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:clickable="false"
+                android:fontFamily="@font/notosans_bold"
+                android:includeFontPadding="false"
+                android:text="UI/UX 디자인"
+                android:textColor="#151313"
+                android:textSize="14sp" />
+        </LinearLayout>
+
         <TextView
-            android:id="@+id/card_subtitle"
-            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:id="@+id/school_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Subtitle goes here"
-            app:layout_constraintStart_toStartOf="@+id/name"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/notosans_bold"
+            android:includeFontPadding="false"
+            android:text="한국대학교"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/main_part" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/action_button_1"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
+        <TextView
+            android:id="@+id/major_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="ACTION 1"
-            android:textAppearance="
-            @style/TextAppearance.MaterialComponents.Headline6"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="@+id/card_subtitle"
-            app:layout_constraintTop_toBottomOf="@+id/card_subtitle" />
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/notosans_regular"
+            android:includeFontPadding="false"
+            android:text="컴퓨터공학과"
+            android:textColor="#6A6A6A"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/school_name"
+            app:layout_constraintTop_toBottomOf="@+id/main_part" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/action_button_2"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:text="ACTION 2"
-            android:textAppearance="
-            @style/TextAppearance.MaterialComponents.Headline6"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toTopOf="@+id/action_button_1"
-            app:layout_constraintStart_toEndOf="@+id/action_button_1"
-            app:layout_constraintTop_toBottomOf="@+id/action_button_1" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
