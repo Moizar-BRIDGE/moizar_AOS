@@ -6,26 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
-    <Button
-        android:id="@+id/googleSignInBtn"
+    <View
+        android:id="@+id/group_3"
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0.5"
+        android:background="@drawable/ic_loginbacklogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/rectangle_5"
         android:layout_width="0dp"
+        android:layout_height="1000dp"
+        android:background="@drawable/ic_loginbackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/group_3" />
+
+
+    <TextView
+        android:id="@+id/logintext"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="33dp"
+        android:fontFamily="@font/notosans_medium"
+        android:text="LOGIN"
+        android:textColor="@color/logintext_color"
+        android:textSize="36.58sp"
+        app:layout_constraintBottom_toTopOf="@+id/welcome"
+        app:layout_constraintStart_toStartOf="@+id/welcome" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="구글 로그인"
+        android:layout_marginTop="360dp"
+        android:layout_marginBottom="93dp"
+        android:fontFamily="@font/notosans_light"
+        android:text="모이자에 오신것을 환영합니다."
+        android:textSize="13.72sp"
+        app:layout_constraintBottom_toTopOf="@+id/LLout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/Facebooklogin_button"
+    <LinearLayout
+        android:id="@+id/LLout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="56dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/googleSignInBtn"
+            android:layout_width="235dp"
+            android:layout_height="57.16dp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <com.facebook.login.widget.LoginButton
+            xmlns:fb="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/Facebooklogin_button"
+            android:layout_width="228.65dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:gravity="right"
+            fb:com_facebook_login_text="Facebook 계정으로 로그인"
+            />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

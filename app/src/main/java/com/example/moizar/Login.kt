@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.Dimension
 import com.facebook.*
 import com.facebook.appevents.AppEventsLogger
 import com.facebook.login.LoginManager
@@ -14,6 +16,7 @@ import com.facebook.login.widget.LoginButton
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -29,12 +32,13 @@ class Login : AppCompatActivity() {
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var callbackManager: CallbackManager
     private lateinit var buttonFacebookLogin: LoginButton
+    private lateinit var googleSignInBtn: SignInButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
         setContentView(R.layout.activity_login)
-        val googleSignInBtn: Button = findViewById(R.id.googleSignInBtn)
+        googleSignInBtn = findViewById(R.id.googleSignInBtn)
         buttonFacebookLogin = findViewById(R.id.Facebooklogin_button)
         // [START config_signin]
         // Configure Google Sign In
@@ -42,7 +46,8 @@ class Login : AppCompatActivity() {
             .requestIdToken(getString(R.string.firebase_web_client_id))
             .requestEmail()
             .build()
-
+        var textView : TextView= googleSignInBtn.getChildAt(0) as TextView
+        textView.setText("Google 계정으로 로그인")
         googleSignInClient = GoogleSignIn.getClient(this, gso)
         // [END config_signin]
 
