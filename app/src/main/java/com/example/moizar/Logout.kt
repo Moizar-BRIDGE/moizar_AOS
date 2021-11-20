@@ -19,6 +19,7 @@ class Logout : AppCompatActivity() {
         setContentView(R.layout.activity_logout)
         val LogoutBtn: Button = findViewById(R.id.Logout)
         val Mainbtn: Button = findViewById(R.id.Main)
+        val profileName: Button = findViewById(R.id.profileName)
         var Loginway = intent.getStringExtra("Login way")
         // 구글 로그아웃을 위해 로그인 세션 가져오기
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -50,7 +51,11 @@ class Logout : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
+        profileName.setOnClickListener {
+            val intent = Intent(this, Profile_Name::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
     private fun GoogleLogout() {
         FirebaseAuth.getInstance().signOut()

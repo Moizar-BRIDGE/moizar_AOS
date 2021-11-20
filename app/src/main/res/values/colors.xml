@@ -16,6 +16,8 @@
     <color name="menu_unselected">#C4C4C4</color>
     <color name="floatingBtn_color">#FEC243</color>
     <color name="logintext_color">#800063FA</color>
-
+    <color name="Step1_color">#FF0063FA</color>
     <color name="btn_color">#F9F9FB</color>
+    <color name="line_color">#FF8C8C8C</color>
+    <color name="edit_color">#FFC4C4C4</color>
 </resources>

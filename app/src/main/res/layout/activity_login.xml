@@ -10,9 +10,6 @@
         android:id="@+id/group_3"
         android:layout_width="wrap_content"
         android:layout_height="500dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:alpha="0.5"
         android:background="@drawable/ic_loginbacklogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile_Name">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/ellipse_68"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/solid_view" />
+
+        <TextView
+            android:id="@+id/madetext"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/notosans_bold"
+            android:textSize="25sp"
+            android:text="자신만의 프로필을 만들어보세요"
+            android:textColor="@color/black" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout">
+
+        <TextView
+            android:id="@+id/step_2"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/notosans_medium"
+            android:text="Step 2"
+            android:textSize="23sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/Step1_color" />
+        <TextView
+            android:id="@+id/major_text"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/notosans_medium"
+            android:gravity="center_horizontal|top"
+            android:textSize="20sp"
+            android:text="사용자 이름과
+            프로필을 설정해주세요"
+            android:textColor="@color/Step1_color" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <View
+            android:id="@+id/ellipse_67"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangle_border"
+            />
+        <ImageButton
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_camera_alt"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="50dp"/>
+        <ImageView
+            android:id="@+id/my_image"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용자 이름"
+            android:layout_marginTop="110dp"
+            android:gravity="center_horizontal|top"
+            android:textColor="@color/black"
+            android:fontFamily="@font/notosans_bold"
+            android:textSize="25sp"
+            android:layout_gravity="center"
+            />
+        <View
+            android:id="@+id/line_22"
+            android:layout_width="220dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="130dp"
+            android:background="@color/line_color"
+            />
+        <TextView
+            android:id="@+id/user_name_num"
+            android:layout_width="40dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center"
+            android:text="0/5자"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="95dp"
+            android:textSize="12sp"
+            android:gravity="center_horizontal|top"
+            />
+        <Button
+            android:id="@+id/step_1_next"
+            android:layout_width="120dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="300dp"
+            android:layout_gravity="center"
+            android:background="@drawable/solid_button"
+            app:backgroundTint="@null"
+            android:text="다음"
+            />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

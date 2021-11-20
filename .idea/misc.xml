@@ -5,11 +5,16 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/drawable/ic_camera_alt.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/drawable/ic_loginbackground.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_loginbacklogo.xml" value="0.20572916666666666" />
+        <entry key="app/src/main/res/drawable/ic_loginstartbacklogo.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_loginstartlogo.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_moizar_logo.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/drawable/ic_msg.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/drawable/ic_notification_bell_on.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/drawable/ic_rectangle_544.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_settings.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/drawable/ic_tab_competition.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/drawable/ic_tab_peoples.xml" value="0.21041666666666667" />
@@ -17,10 +22,18 @@
         <entry key="app/src/main/res/drawable/ic_u_search.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/drawable/main_round_profilebtn.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/drawable/main_round_teamsbtn.xml" value="0.21041666666666667" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/rectangle_border.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/solid_button.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/solid_view.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/square_border.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.28103579588728106" />
+        <entry key="app/src/main/res/layout/activity_loginstart.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_logout.xml" value="0.23958333333333334" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1814814814814815" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_profile_major.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_profile_name.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_profileview.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1921875" />
         <entry key="app/src/main/res/layout/asd.xml" value="0.14990942028985507" />
         <entry key="app/src/main/res/layout/bottom_menu.xml" value="0.15045592705167174" />
         <entry key="app/src/main/res/layout/fragment_view_competition.xml" value="0.29583333333333334" />
