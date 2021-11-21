@@ -72,13 +72,16 @@ fun createFakeProfileList(
     fakeNumber: Int = 10,
     profileList: ProfileList = ProfileList()
 ): ProfileList {
-    profileList.addPerson( ProfileDetail(
-        name = "" + "강석원",
-        part = "" +  "분야",
-        school = "" +  "공학대학교",
-        major = "" + "컴퓨터공학과",
-        isActive = true
-    ))
+    profileList.addPerson(
+        ProfileDetail(
+            name = "" + "강석원",
+            part = "" + "분야",
+            school = "" + "공학대학교",
+            major = "" + "컴퓨터공학과",
+            isActive = true,
+            viewtype = 0
+        )
+    )
     for (i in 1 until fakeNumber) {
         profileList.addPerson(
             ProfileDetail(
@@ -86,7 +89,8 @@ fun createFakeProfileList(
                 part = "" + i + "분야",
                 school = "" + i + "공학대학교",
                 major = "" + i + "컴퓨터공학과",
-                isActive = false
+                isActive = false,
+                viewtype = 1
             )
         )
     }
@@ -109,7 +113,8 @@ class ProfileDetail(
     val part: String,
     val school: String,
     val major: String,
-    val isActive: Boolean
+    val isActive: Boolean,
+    val viewtype: Int
 ) {
 
 }
