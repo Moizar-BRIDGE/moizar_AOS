@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="160dp"
     android:layout_height="150dp"
-    android:layout_marginLeft="15dp"
     android:layout_marginTop="5dp"
-    android:layout_marginRight="15dp"
+    android:layout_marginRight="20dp"
     android:layout_marginBottom="5dp"
     android:backgroundTint="@color/white"
     android:clickable="true"
@@ -22,13 +21,11 @@
         android:paddingBottom="8dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_marginTop="8dp"
             android:id="@+id/imageView"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@drawable/profile_test_img"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="1dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/img_profile_test"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +36,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:lottie_autoPlay="false"
-            app:lottie_fileName="4837-heart.json"
+            app:lottie_fileName="liked.json"
             app:lottie_loop="false" />
 
         <TextView
@@ -48,7 +45,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="7dp"
-
             android:fontFamily="@font/notosans_regular"
             android:includeFontPadding="false"
             android:text="Name"
@@ -62,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="11dp"
-            android:background="@drawable/profile_mainpart_chip"
+            android:background="@drawable/chip_profile_mainpart"
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
             android:paddingRight="10dp"
@@ -87,6 +83,7 @@
             android:id="@+id/school_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/notosans_bold"
             android:includeFontPadding="false"

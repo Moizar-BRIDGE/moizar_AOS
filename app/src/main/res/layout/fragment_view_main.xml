@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".ViewMainFragment">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -52,7 +53,7 @@
                 android:layout_marginLeft="6dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="6dp"
-                android:background="@drawable/main_round_teamsbtn"
+                android:background="@drawable/btn_main_teams"
                 android:elevation="3dp" />
 
             <androidx.legacy.widget.Space
@@ -88,6 +89,7 @@
                 android:id="@+id/profile_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:overScrollMode="never"
                 android:scrollbars="none" />
 
             <androidx.legacy.widget.Space
@@ -119,11 +121,12 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TEST"
-                android:textSize="70dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/competition_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
 
             <androidx.legacy.widget.Space
                 android:layout_width="match_parent"
