@@ -5,6 +5,9 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.15" />
         <entry key="app/src/main/res/drawable-v24/menu_selector_color.xml" value="0.15" />
+        <entry key="app/src/main/res/drawable/circle_profile.xml" value="0.5385416666666667" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2759259259259259" />
+        <entry key="app/src/main/res/drawable/ic_moizar_logo.xml" value="0.5385416666666667" />
         <entry key="app/src/main/res/drawable/ic_msg.xml" value="0.3101851851851852" />
         <entry key="app/src/main/res/drawable/ic_notification_bell_on.xml" value="0.5" />
         <entry key="app/src/main/res/drawable/ic_tab_competition.xml" value="0.15" />
@@ -14,16 +17,20 @@
         <entry key="app/src/main/res/drawable/main_round_profilebtn.xml" value="0.45260416666666664" />
         <entry key="app/src/main/res/drawable/main_round_teamsbtn.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/drawable/menu_selector_color.xml" value="0.15" />
+        <entry key="app/src/main/res/drawable/profile_img.xml" value="0.5385416666666667" />
+        <entry key="app/src/main/res/drawable/profile_mainpart_chip.xml" value="0.5385416666666667" />
         <entry key="app/src/main/res/font/font.xml" value="0.3101851851851852" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1911231884057971" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.39808481532147744" />
         <entry key="app/src/main/res/layout/bottom_menu.xml" value="0.15045592705167174" />
+        <entry key="app/src/main/res/layout/column_profile_item.xml" value="0.4166666666666667" />
+        <entry key="app/src/main/res/layout/custom_competition_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_view_competition.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/fragment_view_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_view_peoples.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/fragment_view_setting.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_view_teams.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/profile_item.xml" value="0.2540526849037487" />
+        <entry key="app/src/main/res/layout/profile_item.xml" value="0.67" />
         <entry key="app/src/main/res/layout/teams_main_btn.xml" value="0.335" />
       </map>
     </option>

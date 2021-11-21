@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
-            android:background="@drawable/ic_notification_bell_on" />
+            android:background="@drawable/ic_notification" />
 
     </LinearLayout>
 

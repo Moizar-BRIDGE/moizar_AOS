@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
 
         android:layout_marginEnd="4dp"
-        android:background="@drawable/findteams_btn"
+        android:background="@drawable/img_findteams"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
