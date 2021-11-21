@@ -70,8 +70,6 @@
                 android:id="@+id/card_subtitle2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checkable="false"
-                android:clickable="false"
                 android:fontFamily="@font/notosans_bold"
                 android:includeFontPadding="false"
                 android:text="UI/UX 디자인"

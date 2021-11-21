@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -48,9 +49,10 @@ class ViewMainFragment : Fragment(), View.OnClickListener {
         // 공모전 모음
         val competition_recycler_view: RecyclerView =
             view.findViewById(R.id.competition_recycler_view)
-        competition_recycler_view.adapter = listAdapter2
         competition_recycler_view.layoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        competition_recycler_view.itemAnimator = DefaultItemAnimator()
+        competition_recycler_view.adapter = listAdapter2
     }
 
 
@@ -70,13 +72,21 @@ fun createFakeProfileList(
     fakeNumber: Int = 10,
     profileList: ProfileList = ProfileList()
 ): ProfileList {
-    for (i in 0 until fakeNumber) {
+    profileList.addPerson( ProfileDetail(
+        name = "" + "강석원",
+        part = "" +  "분야",
+        school = "" +  "공학대학교",
+        major = "" + "컴퓨터공학과",
+        isActive = true
+    ))
+    for (i in 1 until fakeNumber) {
         profileList.addPerson(
             ProfileDetail(
                 name = "" + i + "강석원",
                 part = "" + i + "분야",
                 school = "" + i + "공학대학교",
                 major = "" + i + "컴퓨터공학과",
+                isActive = false
             )
         )
     }
@@ -94,6 +104,12 @@ class ProfileList() {
     }
 }
 
-class ProfileDetail(val name: String, val part: String, val school: String, val major: String) {
+class ProfileDetail(
+    val name: String,
+    val part: String,
+    val school: String,
+    val major: String,
+    val isActive: Boolean
+) {
 
 }

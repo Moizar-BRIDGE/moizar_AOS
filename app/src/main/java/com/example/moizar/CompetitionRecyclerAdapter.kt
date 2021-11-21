@@ -8,9 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import android.content.ClipData.Item
 
-
-
-
 class CompetitionRecyclerAdapter(val profileList: ProfileList) :
     RecyclerView.Adapter<CompetitionRecyclerAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
@@ -29,7 +26,7 @@ class CompetitionRecyclerAdapter(val profileList: ProfileList) :
         val lp = holder.itemView.layoutParams
         if (lp is StaggeredGridLayoutManager.LayoutParams) {
             val sglp = lp
-//            sglp.isFullSpan = item.isActive
+            sglp.isFullSpan = profileList.personList.get(position).isActive
             holder.itemView.layoutParams = sglp
         }
     }
