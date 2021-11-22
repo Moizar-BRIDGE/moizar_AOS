@@ -6,10 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ScrollView
+import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import me.everything.android.ui.overscroll.OverScrollDecoratorHelper
 
 class ViewMainFragment : Fragment(), View.OnClickListener {
 
@@ -53,6 +56,9 @@ class ViewMainFragment : Fragment(), View.OnClickListener {
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         competition_recycler_view.itemAnimator = DefaultItemAnimator()
         competition_recycler_view.adapter = listAdapter2
+
+        val mainScrollView : NestedScrollView = view.findViewById(R.id.main_scrollView)
+        OverScrollDecoratorHelper.setUpOverScroll(profileList_recycler_view, OverScrollDecoratorHelper.ORIENTATION_HORIZONTAL)
     }
 
 
@@ -115,6 +121,4 @@ class ProfileDetail(
     val major: String,
     val isActive: Boolean,
     val viewtype: Int
-) {
-
-}
+)
