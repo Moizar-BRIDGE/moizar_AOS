@@ -27,12 +27,12 @@
         <entry key="app/src/main/res/drawable/solid_view.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/square_border.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/squre_border_after.xml" value="0.19166666666666668" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.14" />
         <entry key="app/src/main/res/layout/activity_loginstart.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_logout.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_profile_interested_design.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_profile_interested_position.xml" value="0.12" />
+        <entry key="app/src/main/res/layout/activity_profile_interested_position.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_profile_major.xml" value="0.17" />
         <entry key="app/src/main/res/layout/activity_profile_name.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_profileview.xml" value="0.25" />

@@ -9,18 +9,19 @@
     <View
         android:id="@+id/group_3"
         android:layout_width="wrap_content"
-        android:layout_height="500dp"
-        android:background="@drawable/ic_loginbacklogo"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="600dp"
+        android:layout_marginBottom="248dp"
+        android:background="@drawable/ic_loginstartbacklogo"
         android:transitionName="imageTransition"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/rectangle_5"
         android:layout_width="0dp"
         android:layout_height="1000dp"
-        android:transitionName="imageTransition1"
         android:background="@drawable/ic_loginbackground"
+        android:transitionName="imageTransition1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/group_3" />
@@ -33,9 +34,9 @@
         android:layout_marginStart="33dp"
         android:fontFamily="@font/notosans_medium"
         android:text="LOGIN"
-        android:transitionName="imageTransition2"
         android:textColor="@color/logintext_color"
         android:textSize="36.58sp"
+        android:transitionName="imageTransition2"
         app:layout_constraintBottom_toTopOf="@+id/welcome"
         app:layout_constraintStart_toStartOf="@+id/welcome" />
 
@@ -46,9 +47,9 @@
         android:layout_marginTop="360dp"
         android:layout_marginBottom="93dp"
         android:fontFamily="@font/notosans_light"
-        android:transitionName="imageTransition3"
         android:text="모이자에 오신것을 환영합니다."
         android:textSize="13.72sp"
+        android:transitionName="imageTransition3"
         app:layout_constraintBottom_toTopOf="@+id/LLout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,26 +64,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome">
+        app:layout_constraintTop_toBottomOf="@+id/group_3">
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/googleSignInBtn"
             android:layout_width="235dp"
             android:layout_height="57.16dp"
-            android:transitionName="imageTransition4"
             android:layout_marginBottom="15dp"
-            />
+            android:transitionName="imageTransition4" />
 
-        <com.facebook.login.widget.LoginButton
-            xmlns:fb="http://schemas.android.com/apk/res-auto"
+        <com.facebook.login.widget.LoginButton xmlns:fb="http://schemas.android.com/apk/res-auto"
             android:id="@+id/Facebooklogin_button"
             android:layout_width="228.65dp"
             android:layout_height="wrap_content"
+            android:gravity="right"
             android:paddingTop="13dp"
             android:paddingBottom="13dp"
-            android:gravity="right"
-            fb:com_facebook_login_text="Facebook 계정으로 로그인"
-            />
+            fb:com_facebook_login_text="Facebook 계정으로 로그인" />
     </LinearLayout>
 
 
