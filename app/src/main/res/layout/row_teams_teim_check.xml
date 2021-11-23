@@ -15,9 +15,9 @@
     app:cardElevation="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/row_item_constraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/btn_teams_bookmark_check"
         android:paddingLeft="45dp"
         android:paddingTop="6dp">
 

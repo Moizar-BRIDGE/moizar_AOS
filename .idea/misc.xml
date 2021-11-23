@@ -8,7 +8,10 @@
         <entry key="app/src/main/res/drawable/btn_main_profile.xml" value="0.2759259259259259" />
         <entry key="app/src/main/res/drawable/btn_main_teams.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/btn_search_filter.xml" value="0.2759259259259259" />
+        <entry key="app/src/main/res/drawable/btn_teams_bookmark_check.xml" value="0.67" />
+        <entry key="app/src/main/res/drawable/btn_teams_bookmark_noncheck.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/chip_profile_mainpart.xml" value="0.43385416666666665" />
+        <entry key="app/src/main/res/drawable/chip_teams_detail.xml" value="0.4328125" />
         <entry key="app/src/main/res/drawable/circle_profile.xml" value="0.5385416666666667" />
         <entry key="app/src/main/res/drawable/ic_btn_search.xml" value="0.2759259259259259" />
         <entry key="app/src/main/res/drawable/ic_competition_dday.xml" value="0.40208333333333335" />
@@ -44,7 +47,8 @@
         <entry key="app/src/main/res/layout/fragment_view_setting.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_view_teams.xml" value="0.2" />
         <entry key="app/src/main/res/layout/profile_item.xml" value="0.67" />
-        <entry key="app/src/main/res/layout/row_teams_item.xml" value="0.3859375" />
+        <entry key="app/src/main/res/layout/row_teams_item.xml" value="0.428" />
+        <entry key="app/src/main/res/layout/row_teams_teim_check.xml" value="0.3859375" />
         <entry key="app/src/main/res/layout/teams_main_btn.xml" value="0.335" />
       </map>
     </option>
