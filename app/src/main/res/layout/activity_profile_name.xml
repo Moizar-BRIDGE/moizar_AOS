@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:fontFamily="@font/notosans_medium"
-            android:text="Step 2"
+            android:text="Step 1"
             android:textSize="23sp"
             android:layout_marginTop="20dp"
             android:textColor="@color/Step1_color" />
@@ -72,36 +72,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <View
-            android:id="@+id/ellipse_67"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileimage"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:background="@drawable/rectangle_border"
             />
         <ImageButton
-            android:id="@+id/logo"
+            android:id="@+id/imagebutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/ic_camera_alt"
             android:layout_marginTop="50dp"
             android:layout_marginLeft="50dp"/>
-        <ImageView
-            android:id="@+id/my_image"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_gravity="center"
-            />
-        <TextView
-            android:id="@+id/user_name"
+        <EditText
+            android:id="@+id/user_name_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="사용자 이름"
+            android:text="사용자이름"
             android:layout_marginTop="110dp"
             android:gravity="center_horizontal|top"
             android:textColor="@color/black"
             android:fontFamily="@font/notosans_bold"
+            android:selectAllOnFocus="true"
+            android:maxLength="5"
+            android:background="@null"
             android:textSize="25sp"
             android:layout_gravity="center"
             />

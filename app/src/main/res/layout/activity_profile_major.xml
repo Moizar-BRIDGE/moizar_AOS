@@ -82,7 +82,7 @@
             <FrameLayout
                 android:id="@+id/frameLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="90dp"
                 android:layout_marginTop="5dp">
 
                 <TextView
@@ -94,22 +94,15 @@
                     android:text="학교명"
                     android:textColor="@color/black" />
 
-                <View
-                    android:id="@+id/ellipse_70"
-                    android:layout_width="300dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/square_border" />
-
                 <EditText
                     android:id="@+id/college_name_edit"
                     android:layout_width="290dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_gravity="center|left"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginLeft="55dp"
+                    android:paddingLeft="5dp"
                     android:layout_marginTop="20dp"
-                    android:background="@null"
+                    android:background="@drawable/square_border"
                     android:fontFamily="@font/notosans_regular"
                     android:hint="학교 이름을 입력하세요."
                     android:textColorHint="@color/edit_color" />
@@ -118,7 +111,7 @@
             <FrameLayout
                 android:id="@+id/frameLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="90dp"
                 android:layout_marginTop="20dp">
 
                 <TextView
@@ -130,22 +123,15 @@
                     android:text="전공"
                     android:textColor="@color/black" />
 
-                <View
-                    android:id="@+id/ellipse_71"
-                    android:layout_width="300dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/square_border" />
-
                 <EditText
                     android:id="@+id/major_edit"
                     android:layout_width="290dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_gravity="center|left"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginLeft="55dp"
                     android:layout_marginTop="20dp"
-                    android:background="@null"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/square_border"
                     android:fontFamily="@font/notosans_regular"
                     android:hint="전공을 입력하세요."
                     android:textColorHint="@color/edit_color" />
@@ -154,7 +140,7 @@
             <FrameLayout
                 android:id="@+id/frameLayout4"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="90dp"
                 android:layout_marginTop="20dp">
 
                 <TextView
@@ -166,22 +152,15 @@
                     android:text="이메일"
                     android:textColor="@color/black" />
 
-                <View
-                    android:id="@+id/ellipse_72"
-                    android:layout_width="300dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/square_border" />
-
                 <EditText
                     android:id="@+id/email_edit"
                     android:layout_width="290dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_gravity="center|left"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginLeft="55dp"
                     android:layout_marginTop="20dp"
-                    android:background="@null"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/square_border"
                     android:fontFamily="@font/notosans_regular"
                     android:hint="이메일을 입력하세요."
                     android:textColorHint="@color/edit_color" />
