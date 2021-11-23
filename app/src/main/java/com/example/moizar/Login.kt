@@ -82,8 +82,10 @@ class Login : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-        updateUI(currentUser)
+        var currentUser = auth.currentUser
+        if (currentUser != null) {
+            updateUI(currentUser)
+        }
     }
     // [END on_start_check_user]
 
@@ -117,7 +119,6 @@ class Login : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
-                    val user = auth.currentUser
                     loginSuccess()
                 } else {
                     // If sign in fails, display a message to the user.
@@ -139,17 +140,15 @@ class Login : AppCompatActivity() {
     private fun updateUI(user: FirebaseUser?) {
 
         if (user != null) {
-            Log.d("123","${user.email}")
+            Log.d("123","${user.displayName}")
             val email = user.email!!.split("@")
             if(email[1] == "gmail.com"){
-                val intent = Intent(this, Logout::class.java)
-                intent.putExtra("Login way", "Google");
+                val intent = Intent(this, Profile_Name::class.java)
                 startActivity(intent)
                 finish()
             }
             else{
-                val intent = Intent(this, Logout::class.java)
-                intent.putExtra("Login way", "Facebook");
+                val intent = Intent(this, Profile_Name::class.java)
                 startActivity(intent)
                 finish()
             }
@@ -170,8 +169,7 @@ class Login : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
-                    val intent = Intent(this, Logout::class.java)
-                    intent.putExtra("Login way", "Facebook");
+                    val intent = Intent(this, Profile_Name::class.java)
                     startActivity(intent)
                     finish()
                 } else {
@@ -186,8 +184,7 @@ class Login : AppCompatActivity() {
 
     // [END auth_with_facebook]
     private fun loginSuccess() {
-        val intent = Intent(this, Logout::class.java)
-        intent.putExtra("Login way", "Google");
+        val intent = Intent(this, Profile_Name::class.java)
         startActivity(intent)
         finish()
     }

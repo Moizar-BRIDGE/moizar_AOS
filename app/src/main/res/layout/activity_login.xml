@@ -12,12 +12,14 @@
         android:layout_height="500dp"
         android:background="@drawable/ic_loginbacklogo"
         app:layout_constraintStart_toStartOf="parent"
+        android:transitionName="imageTransition"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/rectangle_5"
         android:layout_width="0dp"
         android:layout_height="1000dp"
+        android:transitionName="imageTransition1"
         android:background="@drawable/ic_loginbackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +33,7 @@
         android:layout_marginStart="33dp"
         android:fontFamily="@font/notosans_medium"
         android:text="LOGIN"
+        android:transitionName="imageTransition2"
         android:textColor="@color/logintext_color"
         android:textSize="36.58sp"
         app:layout_constraintBottom_toTopOf="@+id/welcome"
@@ -43,6 +46,7 @@
         android:layout_marginTop="360dp"
         android:layout_marginBottom="93dp"
         android:fontFamily="@font/notosans_light"
+        android:transitionName="imageTransition3"
         android:text="모이자에 오신것을 환영합니다."
         android:textSize="13.72sp"
         app:layout_constraintBottom_toTopOf="@+id/LLout"
@@ -65,6 +69,7 @@
             android:id="@+id/googleSignInBtn"
             android:layout_width="235dp"
             android:layout_height="57.16dp"
+            android:transitionName="imageTransition4"
             android:layout_marginBottom="15dp"
             />
 

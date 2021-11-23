@@ -14,11 +14,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <View
-            android:id="@+id/group_5"
+            android:id="@+id/group_3"
             android:layout_width="wrap_content"
             android:layout_height="500dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:transitionName="imageTransition"
             android:layout_marginTop="33dp"
             android:background="@drawable/ic_loginstartbacklogo"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,10 +27,11 @@
     </LinearLayout>
 
     <View
-        android:id="@+id/rectangle_7"
+        android:id="@+id/rectangle_5"
         android:layout_width="0dp"
         android:layout_height="1000dp"
         android:background="@drawable/ic_loginbackground"
+        android:transitionName="imageTransition1"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,17 +53,20 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/notosans_light"
             android:text="공모전 팀 빌딩 서비스"
+            android:transitionName="imageTransition2"
             android:textSize="13.73sp" />
         <ImageView
-            android:id="@+id/logo"
+            android:id="@+id/welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:transitionName="imageTransition3"
             android:background="@drawable/ic_loginstartlogo" />
         <Button
-            android:id="@+id/Strat"
+            android:id="@+id/googleSignInBtn"
             android:layout_width="186dp"
             android:layout_height="44dp"
             android:layout_marginTop="50dp"
+            android:transitionName="imageTransition4"
             android:background="@drawable/solid_button"
             app:backgroundTint="@null"
             android:text="시작하기"
