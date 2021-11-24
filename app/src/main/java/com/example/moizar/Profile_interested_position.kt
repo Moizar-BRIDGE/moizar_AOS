@@ -18,11 +18,6 @@ import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
 class Profile_interested_position : AppCompatActivity() {
     private lateinit var nextButton: Button
     private lateinit var beforeButton: Button
-    private  var chip0 : CharSequence = ""
-    private  var chip1 : CharSequence = ""
-    private  var chip2 : CharSequence = ""
-    private  var chip3 : CharSequence = ""
-    private  var chip4 : CharSequence = ""
     private lateinit var design_button: ImageButton
     private lateinit var design_text: TextView
     private lateinit var developer_button: ImageButton
@@ -46,11 +41,6 @@ class Profile_interested_position : AppCompatActivity() {
         marketing_text = findViewById(R.id.marketing_text)
         etc_button = findViewById(R.id.etc_button)
         etc_text = findViewById(R.id.etc_text)
-        chip0 = intent.getCharSequenceExtra("chip0")!!
-        chip1 = intent.getCharSequenceExtra("chip1")!!
-        chip2 = intent.getCharSequenceExtra("chip2")!!
-        chip3 = intent.getCharSequenceExtra("chip3")!!
-        chip4 = intent.getCharSequenceExtra("chip4")!!
 
         nextButton.setOnClickListener {
             if(developer_button.isSelected){
@@ -89,11 +79,6 @@ class Profile_interested_position : AppCompatActivity() {
                 )
                 design_button.isSelected = false
                 design_text.setTextColor(Color.GRAY)
-                intent.putExtra("chip0", chip0);
-                intent.putExtra("chip1", chip1);
-                intent.putExtra("chip2", chip2);
-                intent.putExtra("chip3", chip3);
-                intent.putExtra("chip4", chip4);
                 startActivity(intent, options.toBundle())
                 Handler().postDelayed({finish() }, 2000)
             }
