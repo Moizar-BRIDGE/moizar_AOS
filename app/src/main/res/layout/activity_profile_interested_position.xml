@@ -10,6 +10,7 @@
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:transitionName="imageTransition2"
         android:layout_marginBottom="541dp"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,125 +68,117 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/design_CardView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="234dp"
-        android:backgroundTint="@color/btn_color"
-        android:clickable="true"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="3dp"
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.268">
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
 
+        <ImageButton
+            android:id="@+id/design_button"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:elevation="3dp"
+            android:transitionName="imageTransition"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/cardbuttonselect"
+            android:layout_marginTop="50dp"
+            android:clickable="true"
+            android:fontFamily="@font/notosans_medium"
+            android:gravity="center"
+            android:textSize="20sp" />
         <TextView
             android:id="@+id/design_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="43dp"
-            android:layout_marginTop="33dp"
+            android:transitionName="imageTransition1"
+            android:elevation="3dp"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="95dp"
             android:fontFamily="@font/notosans_medium"
-            android:gravity="center_horizontal|top"
+            android:gravity="center"
             android:text="디자인"
-            android:textColor="#6A6A6A"
-            android:textSize="23sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/developer_CardView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="225dp"
-        android:layout_marginBottom="234dp"
-        android:backgroundTint="@color/btn_color"
-        android:clickable="true"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.264">
-
+            android:textSize="20sp" />
+        <ImageButton
+            android:id="@+id/developer_button"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:elevation="3dp"
+            android:transitionName="imageTransition"
+            android:layout_marginStart="225dp"
+            android:background="@drawable/cardbuttonselect"
+            android:layout_marginTop="50dp"
+            android:clickable="true"
+            android:fontFamily="@font/notosans_medium"
+            android:gravity="center"
+            android:textSize="20sp" />
         <TextView
             android:id="@+id/developer_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="43dp"
-            android:layout_marginTop="33dp"
+            android:elevation="3dp"
+            android:transitionName="imageTransition1"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="95dp"
             android:fontFamily="@font/notosans_medium"
-            android:gravity="center_horizontal|top"
+            android:gravity="center"
             android:text="개발자"
-            android:textColor="#6A6A6A"
-            android:textSize="23sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/marketing_cardview"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="120dp"
-        android:backgroundTint="@color/btn_color"
-        android:clickable="true"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="1.0">
-
+            android:textSize="20sp" />
+        <ImageButton
+            android:id="@+id/marketing_button"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:elevation="3dp"
+            android:transitionName="imageTransition"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/cardbuttonselect"
+            android:layout_marginTop="230dp"
+            android:clickable="true"
+            android:fontFamily="@font/notosans_medium"
+            android:gravity="center"
+            android:textSize="20sp" />
         <TextView
             android:id="@+id/marketing_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="45dp"
+            android:elevation="3dp"
+            android:transitionName="imageTransition1"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="275dp"
             android:fontFamily="@font/notosans_medium"
-            android:gravity="center_horizontal|top"
+            android:gravity="center"
             android:text="기획/마케팅"
-            android:textColor="#6A6A6A"
-            android:textSize="23sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/etc_cardview"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="224dp"
-        android:layout_marginBottom="120dp"
-        android:backgroundTint="@color/btn_color"
-        android:clickable="true"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="1.0">
-
+            android:textSize="20sp" />
+        <ImageButton
+            android:id="@+id/etc_button"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:elevation="3dp"
+            android:transitionName="imageTransition"
+            android:layout_marginStart="225dp"
+            android:background="@drawable/cardbuttonselect"
+            android:layout_marginTop="230dp"
+            android:clickable="true"
+            android:fontFamily="@font/notosans_medium"
+            android:gravity="center"
+            android:textSize="20sp" />
         <TextView
             android:id="@+id/etc_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="53dp"
-            android:layout_marginTop="45dp"
+            android:elevation="3dp"
+            android:transitionName="imageTransition1"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="275dp"
             android:fontFamily="@font/notosans_medium"
-            android:gravity="center_horizontal|top"
+            android:gravity="center"
             android:text="기타"
-            android:textColor="#6A6A6A"
-            android:textSize="23sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </com.google.android.material.card.MaterialCardView>
+            android:textSize="20sp" />
+
+    </FrameLayout>
 
     <FrameLayout
         android:id="@+id/frameLayout5"
