@@ -7,10 +7,11 @@
     android:orientation="vertical"
     tools:context=".ViewMainFragment">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main_scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="30dp"
+        android:overScrollMode="never"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,13 +19,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -50,11 +53,16 @@
             <com.example.moizar.MainTeamsBtnView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="6dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginRight="6dp"
-                android:background="@drawable/main_round_teamsbtn"
-                android:elevation="3dp" />
+                android:layout_marginRight="16dp"
+                android:background="@drawable/btn_main_teams"
+                android:elevation="10dp" />
+            <!--            <ImageButton-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:backgroundTint="@color/no_color"-->
+            <!--                android:src="@drawable/img_teams_btn"/>-->
 
             <androidx.legacy.widget.Space
                 android:layout_width="match_parent"
@@ -62,7 +70,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -88,16 +98,19 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/profile_recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
                 android:scrollbars="none" />
 
             <androidx.legacy.widget.Space
                 android:layout_width="match_parent"
-                android:layout_height="25dp" />
+                android:layout_height="5dp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -120,18 +133,21 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/competition_recycler_view"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TEST"
-                android:textSize="70dp"/>
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:paddingBottom="10dp"
+                android:scrollbars="none" />
 
             <androidx.legacy.widget.Space
                 android:layout_width="match_parent"
-                android:layout_height="150dp" />
+                android:layout_height="100dp" />
 
 
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

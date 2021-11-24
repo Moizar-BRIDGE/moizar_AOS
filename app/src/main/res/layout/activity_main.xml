@@ -44,18 +44,18 @@
 
         <ImageButton
             android:id="@+id/msg_ic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_gravity="center"
-            android:background="@drawable/ic_msg" />
+            android:background="@drawable/ic_msg2_" />
 
         <ImageButton
             android:id="@+id/notification_ic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="27dp"
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
-            android:background="@drawable/ic_notification_bell_on" />
+            android:background="@drawable/ic_notification2" />
 
     </LinearLayout>
 
