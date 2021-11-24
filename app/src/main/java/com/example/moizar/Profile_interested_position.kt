@@ -43,21 +43,7 @@ class Profile_interested_position : AppCompatActivity() {
         etc_text = findViewById(R.id.etc_text)
 
         nextButton.setOnClickListener {
-            if(developer_button.isSelected){
-                val intent = Intent(this, Profile_Name::class.java)
-                startActivity(intent)
-                finish()
-            }
-            if(marketing_button.isSelected){
-                val intent = Intent(this, Profile_Name::class.java)
-                startActivity(intent)
-                finish()
-            }
-            if(etc_button.isSelected){
-                val intent = Intent(this, Profile_Name::class.java)
-                startActivity(intent)
-                finish()
-            }
+
         }
 
         design_button.setOnClickListener{
@@ -93,12 +79,12 @@ class Profile_interested_position : AppCompatActivity() {
             etc_text.setTextColor(Color.GRAY)
             if( developer_button.isSelected){
                 developer_text.setTextColor(ContextCompat.getColor(applicationContext!!,R.color.step3_text_color))
-                val intent = Intent(this, Profile_interested_design::class.java)
+                val intent = Intent(this, Profile_interested_developer::class.java)
                 var options : ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
                     this,
-                    Pair.create(developer_button, "imageTransition"),
-                    Pair.create(developer_text, "imageTransition1"),
-                    Pair.create(frame, "imageTransition2"),
+                    Pair.create(developer_button, "imageTransition2"),
+                    Pair.create(developer_text, "imageTransition7"),
+                    Pair.create(frame, "imageTransition5"),
                 )
                 startActivity(intent, options.toBundle())
                 Handler().postDelayed({finish() }, 2000)
@@ -115,12 +101,12 @@ class Profile_interested_position : AppCompatActivity() {
             etc_text.setTextColor(Color.GRAY)
             if( marketing_button.isSelected){
                 marketing_text.setTextColor(ContextCompat.getColor(applicationContext!!,R.color.step3_text_color))
-                val intent = Intent(this, Profile_interested_design::class.java)
+                val intent = Intent(this, Profile_interested_marketing::class.java)
                 var options : ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
                     this,
-                    Pair.create(marketing_button, "imageTransition"),
-                    Pair.create(marketing_text, "imageTransition1"),
-                    Pair.create(frame, "imageTransition2"),
+                    Pair.create(marketing_button, "imageTransition3"),
+                    Pair.create(marketing_text, "imageTransition8"),
+                    Pair.create(frame, "imageTransition5"),
                 )
                 startActivity(intent, options.toBundle())
                 Handler().postDelayed({finish() }, 2000)
@@ -137,13 +123,12 @@ class Profile_interested_position : AppCompatActivity() {
             marketing_text.setTextColor(Color.GRAY)
             if( etc_button.isSelected){
                 etc_text.setTextColor(ContextCompat.getColor(applicationContext!!,R.color.step3_text_color))
-                marketing_text.setTextColor(ContextCompat.getColor(applicationContext!!,R.color.step3_text_color))
-                val intent = Intent(this, Profile_interested_design::class.java)
+                val intent = Intent(this, Profile_interested_etc::class.java)
                 var options : ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
                     this,
-                    Pair.create(etc_button, "imageTransition"),
-                    Pair.create(etc_text, "imageTransition1"),
-                    Pair.create(frame, "imageTransition2"),
+                    Pair.create(etc_button, "imageTransition4"),
+                    Pair.create(etc_text, "imageTransition9"),
+                    Pair.create(frame, "imageTransition5"),
                 )
                 startActivity(intent, options.toBundle())
                 Handler().postDelayed({finish() }, 2000)
