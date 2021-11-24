@@ -18,6 +18,7 @@ import com.google.android.material.chip.ChipGroup
 
 class Profile_interested_design : AppCompatActivity() {
     private  var chipnum : Int = 0
+    private lateinit var complete_btn : Button
     private lateinit var disignchip_ux : Chip
     private lateinit var disignchip_graphic : Chip
     private lateinit var disignchip_character : Chip
@@ -35,6 +36,7 @@ class Profile_interested_design : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_interested_design)
+        complete_btn = findViewById(R.id.googleSignInBtn)
         disignchip_ux = findViewById(R.id.disignchip_ux)
         disignchip_graphic = findViewById(R.id.disignchip_graphic)
         disignchip_character = findViewById(R.id.disignchip_character)
@@ -49,6 +51,9 @@ class Profile_interested_design : AppCompatActivity() {
         disignchip_web = findViewById(R.id.disignchip_web)
         chipGroup = findViewById(R.id.chipGroup)
         chipClick()
+        complete_btn.setOnClickListener {
+
+        }
     }
     @RequiresApi(Build.VERSION_CODES.M)
     private fun chipClick() {
