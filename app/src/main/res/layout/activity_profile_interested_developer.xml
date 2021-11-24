@@ -44,7 +44,7 @@
             android:text="Step 3"
             android:textColor="@color/Step1_color"
             android:textSize="23sp" />
-            />
+        />
     </FrameLayout>
 
 
@@ -68,30 +68,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chipGroup">
 
-    <ImageView
-        android:id="@+id/design_view"
-        android:layout_width="335dp"
-        android:layout_height="390dp"
-        android:transitionName="imageTransition"
-        android:elevation="3dp"
-        android:layout_marginStart="40dp"
-        android:background="@drawable/step3_chip"
-        android:fontFamily="@font/notosans_medium"
-        android:gravity="center"
-        android:textSize="20sp" />
+        <ImageView
+            android:id="@+id/developer_view"
+            android:layout_width="335dp"
+            android:layout_height="390dp"
+            android:transitionName="imageTransition2"
+            android:elevation="3dp"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/step3_chip"
+            android:fontFamily="@font/notosans_medium"
+            android:gravity="center"
+            android:textSize="20sp" />
 
         <TextView
-            android:transitionName="imageTransition6"
-        android:id="@+id/design_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="3dp"
-        android:layout_marginStart="60dp"
-        android:fontFamily="@font/notosans_medium"
-        android:gravity="center"
-        android:text="디자인"
-        android:textColor="#FF0063FB"
-        android:textSize="25sp"/>
+            android:transitionName="imageTransition7"
+            android:id="@+id/developer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:layout_marginStart="60dp"
+            android:fontFamily="@font/notosans_medium"
+            android:gravity="center"
+            android:text="개발자"
+            android:textColor="#FF0063FB"
+            android:textSize="25sp"/>
         <Button
             android:id="@+id/completebutton"
             android:layout_width="120dp"
@@ -129,23 +129,24 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_ux"
+                        android:id="@+id/developer_data"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="UI/UX 디자인"
                         android:layout_gravity="left"
+                        android:text="데이터 엔지니어"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
                         app:chipStrokeColor="@color/Step1_color"
                         app:chipStrokeWidth="1dp" />
+
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_graphic"
+                        android:id="@+id/developer_soft"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
-                        android:layout_marginStart="13dp"
-                        android:text="그래픽 디자인"
+                        android:layout_marginStart="15dp"
+                        android:text="소프트웨어"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
@@ -153,10 +154,10 @@
                         app:chipStrokeWidth="1dp" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_character"
+                        android:id="@+id/developer_front"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="캐릭터 디자인"
+                        android:text="프론트엔드"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
@@ -164,10 +165,11 @@
                         app:chipStrokeWidth="1dp" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_illustration"
+                        android:id="@+id/developer_system"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="일러스트 디자인"
+                        android:layout_marginStart="45dp"
+                        android:text="시스템관리"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
@@ -175,10 +177,10 @@
                         app:chipStrokeWidth="1dp" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_BI"
+                        android:id="@+id/developer_java"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="BI/BX 디자인"
+                        android:text="자바 개발자"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
@@ -186,11 +188,11 @@
                         app:chipStrokeWidth="1dp" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_mobile"
+                        android:id="@+id/developer_server"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
-                        android:text="모바일 디자인"
+                        android:layout_marginStart="40dp"
+                        android:text="서버 개발자"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
@@ -198,10 +200,10 @@
                         app:chipStrokeWidth="1dp" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_video"
+                        android:id="@+id/developer_android"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="영상 디자인"
+                        android:text="안드로이드"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
@@ -209,11 +211,11 @@
                         app:chipStrokeWidth="1dp" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_adver"
+                        android:id="@+id/developer_ios"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="41dp"
-                        android:text="광고 디자인"
+                        android:layout_marginStart="45dp"
+                        android:text="IOS 개발자"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
@@ -221,10 +223,10 @@
                         app:chipStrokeWidth="1dp" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_product"
+                        android:id="@+id/developer_python"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="제품 디자인"
+                        android:text="파이썬 개발자"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
@@ -232,11 +234,11 @@
                         app:chipStrokeWidth="1dp" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_fashion"
+                        android:id="@+id/developer_devops"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="41dp"
-                        android:text="패션 디자인"
+                        android:layout_marginStart="42dp"
+                        android:text="DevOps"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
@@ -244,10 +246,10 @@
                         app:chipStrokeWidth="1dp" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_3D"
+                        android:id="@+id/developer_node_js"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="3D 디자인"
+                        android:text="Node.js"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
@@ -255,11 +257,54 @@
                         app:chipStrokeWidth="1dp" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/disignchip_web"
+                        android:id="@+id/developer_network"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="63dp"
-                        android:text="웹 디자인"
+                        android:layout_marginStart="74dp"
+                        android:text="네트워크"
+                        android:textAppearance="@style/chipTextAppearance"
+                        android:textColor="@color/Step1_color"
+                        app:chipBackgroundColor="@color/white"
+                        app:chipStrokeColor="@color/Step1_color"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/developer_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="C언어 개발자"
+                        android:textAppearance="@style/chipTextAppearance"
+                        android:textColor="@color/Step1_color"
+                        app:chipBackgroundColor="@color/white"
+                        app:chipStrokeColor="@color/Step1_color"
+                        app:chipStrokeWidth="1dp" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/developer_cflus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="C++언어 개발자"
+                        android:layout_marginStart="4dp"
+                        android:textAppearance="@style/chipTextAppearance"
+                        android:textColor="@color/Step1_color"
+                        app:chipBackgroundColor="@color/white"
+                        app:chipStrokeColor="@color/Step1_color"
+                        app:chipStrokeWidth="1dp" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/developer_machine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="머신러닝"
+                        android:textAppearance="@style/chipTextAppearance"
+                        android:textColor="@color/Step1_color"
+                        app:chipBackgroundColor="@color/white"
+                        app:chipStrokeColor="@color/Step1_color"
+                        app:chipStrokeWidth="1dp" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/developer_web"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="72dp"
+                        android:text="웹 개발자"
                         android:textAppearance="@style/chipTextAppearance"
                         android:textColor="@color/Step1_color"
                         app:chipBackgroundColor="@color/white"
