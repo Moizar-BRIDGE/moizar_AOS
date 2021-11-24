@@ -15,6 +15,11 @@ class Profile_Major : AppCompatActivity() {
     private lateinit var college_name_edit: EditText
     private lateinit var major_edit: EditText
     private lateinit var email_edit: EditText
+    private  var chip0 : CharSequence = ""
+    private  var chip1 : CharSequence = ""
+    private  var chip2 : CharSequence = ""
+    private  var chip3 : CharSequence = ""
+    private  var chip4 : CharSequence = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_major)
@@ -27,6 +32,11 @@ class Profile_Major : AppCompatActivity() {
 
         nextButton.setOnClickListener {
             val intent = Intent(this, Profile_interested_position::class.java)
+            intent.putExtra("chip0", chip0);
+            intent.putExtra("chip1", chip1);
+            intent.putExtra("chip2", chip2);
+            intent.putExtra("chip3", chip3);
+            intent.putExtra("chip4", chip4);
             startActivity(intent)
             finish()
         }

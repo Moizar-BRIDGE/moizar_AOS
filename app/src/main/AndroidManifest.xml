@@ -19,6 +19,9 @@
         <activity
             android:name=".Profile_interested_position"
             android:exported="true" />
+
+
+
         <activity
             android:name=".Profile_Major"
             android:exported="true" />

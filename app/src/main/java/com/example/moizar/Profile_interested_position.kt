@@ -6,6 +6,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.util.Pair
 import android.widget.*
 import androidx.cardview.widget.CardView
@@ -17,6 +18,11 @@ import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
 class Profile_interested_position : AppCompatActivity() {
     private lateinit var nextButton: Button
     private lateinit var beforeButton: Button
+    private  var chip0 : CharSequence = ""
+    private  var chip1 : CharSequence = ""
+    private  var chip2 : CharSequence = ""
+    private  var chip3 : CharSequence = ""
+    private  var chip4 : CharSequence = ""
     private lateinit var design_button: ImageButton
     private lateinit var design_text: TextView
     private lateinit var developer_button: ImageButton
@@ -40,7 +46,11 @@ class Profile_interested_position : AppCompatActivity() {
         marketing_text = findViewById(R.id.marketing_text)
         etc_button = findViewById(R.id.etc_button)
         etc_text = findViewById(R.id.etc_text)
-
+        chip0 = intent.getCharSequenceExtra("chip0")!!
+        chip1 = intent.getCharSequenceExtra("chip1")!!
+        chip2 = intent.getCharSequenceExtra("chip2")!!
+        chip3 = intent.getCharSequenceExtra("chip3")!!
+        chip4 = intent.getCharSequenceExtra("chip4")!!
 
         nextButton.setOnClickListener {
             if(developer_button.isSelected){
@@ -74,12 +84,18 @@ class Profile_interested_position : AppCompatActivity() {
                 var options : ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
                     this,
                     Pair.create(design_button, "imageTransition"),
-                    Pair.create(design_text, "imageTransition1"),
-                    Pair.create(frame, "imageTransition2"),
+                    Pair.create(design_text, "imageTransition6"),
+                    Pair.create(frame, "imageTransition5"),
                 )
                 design_button.isSelected = false
                 design_text.setTextColor(Color.GRAY)
+                intent.putExtra("chip0", chip0);
+                intent.putExtra("chip1", chip1);
+                intent.putExtra("chip2", chip2);
+                intent.putExtra("chip3", chip3);
+                intent.putExtra("chip4", chip4);
                 startActivity(intent, options.toBundle())
+                Handler().postDelayed({finish() }, 2000)
             }
         }
         developer_button.setOnClickListener{
@@ -100,6 +116,7 @@ class Profile_interested_position : AppCompatActivity() {
                     Pair.create(frame, "imageTransition2"),
                 )
                 startActivity(intent, options.toBundle())
+                Handler().postDelayed({finish() }, 2000)
             }
 
         }
@@ -121,6 +138,7 @@ class Profile_interested_position : AppCompatActivity() {
                     Pair.create(frame, "imageTransition2"),
                 )
                 startActivity(intent, options.toBundle())
+                Handler().postDelayed({finish() }, 2000)
             }
 
         }
@@ -143,6 +161,7 @@ class Profile_interested_position : AppCompatActivity() {
                     Pair.create(frame, "imageTransition2"),
                 )
                 startActivity(intent, options.toBundle())
+                Handler().postDelayed({finish() }, 2000)
             }
 
         }
