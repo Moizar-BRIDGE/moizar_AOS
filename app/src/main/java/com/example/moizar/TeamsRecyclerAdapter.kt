@@ -1,22 +1,29 @@
 package com.example.moizar
 
 import android.animation.ValueAnimator
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
 
 class TeamsRecyclerAdapter(
     val profileList: ProfileList,
+    val activity: FragmentActivity?
 ) : RecyclerView.Adapter<TeamsRecyclerAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val personName: TextView
 
         init {
             personName = itemView.findViewById(R.id.competition_tag)
+            itemView.setOnClickListener {
+                val teamsDetailIntent = Intent(activity, TeamsDetailActivity::class.java)
+                activity!!.startActivity(teamsDetailIntent)
+            }
         }
     }
 

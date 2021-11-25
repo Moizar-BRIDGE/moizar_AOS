@@ -10,9 +10,6 @@ import androidx.activity.OnBackPressedCallback
 import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.chip.Chip
-import com.google.android.material.chip.ChipGroup
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ViewTeamsFragment : Fragment() {
     private lateinit var teamslistAdapter: TeamsRecyclerAdapter
@@ -41,7 +38,8 @@ class ViewTeamsFragment : Fragment() {
         val profileList = createFakeProfileList1(fakeNumber = 20)
         teamslistAdapter =
             TeamsRecyclerAdapter(
-                profileList = profileList
+                profileList = profileList,
+                activity = getActivity()
             )
         val teamsListRecyclerView: RecyclerView = view.findViewById(R.id.teams_recyclerView)
         teamsListRecyclerView.adapter = teamslistAdapter
