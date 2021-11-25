@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp">
+        <ImageView
+            android:id="@+id/notifi"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ic_notification2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="조재원"
+            android:layout_marginLeft="30dp"
+            android:textSize="14sp"
+            android:textColor="#0063F7"
+            android:fontFamily="@font/notosans_regular"
+            app:layout_constraintLeft_toRightOf="@id/notifi"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/name_after"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="님으로부터 온 초대 알림입니다."
+            android:layout_marginLeft="5dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/notosans_regular"
+            app:layout_constraintLeft_toRightOf="@id/name"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Alarm_detail"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="2021년 초기창업패키지 온라인 창업 프로젝트 개발자로 모시고 싶습니다."
+            android:layout_marginLeft="30dp"
+            android:textColor="#8A8E9C"
+            android:fontFamily="@font/notosans_regular"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@id/notifi"
+            app:layout_constraintTop_toBottomOf="@id/name"/>
+
+        <ImageButton
+            android:id="@+id/clear"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_clear"
+            android:foregroundGravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlarmDatail">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosans_bold"
+            android:text="김예림"
+            android:textColor="#0063F7"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/name_after"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosans_bold"
+            android:text="님의 지원 메시지"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:id="@+id/competition_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosans_medium"
+            android:text="2021년 공공 데이터 공모전"
+            android:textColor="#6A6A6A"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#C4C4C4" />
+
+        <TextView
+            android:id="@+id/support_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/notosans_bold"
+            android:text="영상 편집가 지원을 희망합니다."
+            android:textColor="#6A6A6A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/support_detail"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/notosans_regular"
+            android:text="안녕하세요. 영상 편집가를 지원하고 싶습니다. 저의 능력은 프로필을 참고해주세요"
+            android:textColor="#6A6A6A"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#C4C4C4" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        >
+
+        <ImageView
+            android:id="@+id/ellipse_68"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectangle_border"
+            />
+
+        <TextView
+            android:id="@+id/profile_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:fontFamily="@font/notosans_regular"
+            android:gravity="right"
+            android:text="프로필 더보기"
+            android:textColor="#0063FB"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/notosans_regular"
+            android:includeFontPadding="false"
+            android:text="김예림"
+            android:textColor="#0063FB"
+            android:textSize="12sp"
+             />
+        <TextView
+            android:id="@+id/major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/notosans_bold"
+            android:text="학교/학과"
+            android:textColor="#6A6A6A"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/major_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="90dp"
+            android:fontFamily="@font/notosans_regular"
+            android:text="한국대학교 미디어학과"
+            android:textColor="#6A6A6A"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/appeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/notosans_bold"
+            android:text="한 줄 어필"
+            android:textColor="#6A6A6A"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/appeal_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="130dp"
+            android:fontFamily="@font/notosans_regular"
+            android:text="영상편집 및 UCC 제작 경함 다수"
+            android:textColor="#6A6A6A"
+            android:textSize="14sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#C4C4C4"
+            android:layout_gravity="bottom"/>
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <Button
+            android:id="@+id/step_2_before"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/solid_button"
+            android:text = "거절"
+            android:textColor="@color/black"
+            app:backgroundTint="#FFEAEAEA" />
+
+        <Button
+            android:id="@+id/step_2_next"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/solid_button"
+            android:text="수락"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
