@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -28,12 +30,19 @@ class ViewTeamsFragment : Fragment() {
             TeamsRecyclerAdapter(
                 profileList = profileList
             )
-
         val teamsListRecyclerView: RecyclerView = view.findViewById(R.id.teams_recyclerView)
         teamsListRecyclerView.adapter = teamslistAdapter
         teamsListRecyclerView.layoutManager =
             LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+
+        val teamsSearchFilter: ImageButton = view.findViewById(R.id.teams_search_filter)
+        teamsSearchFilter.setOnClickListener {
+            view.findViewById<NestedScrollView>(R.id.filter_scrim_view).visibility = View.VISIBLE
+        }
     }
+
+
+
 }
 
 fun createFakeProfileList1(

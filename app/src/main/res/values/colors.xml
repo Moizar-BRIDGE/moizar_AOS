@@ -23,4 +23,6 @@
     <color name="step3_text_color">#FF2800FA</color>
     <color name="step3_check_chip_color">#FF2500F7</color>
     <color name="step3_click_chip_color">#FF0063FB</color>
+    <color name="chip_teams_stroke_color">#2500F7</color>
+
 </resources>
