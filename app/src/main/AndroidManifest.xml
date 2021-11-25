@@ -14,6 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
         <activity
+            android:name=".TeamsDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TeamsWriteActivity"
+            android:exported="false" />
             android:name=".Profile_myappeal"
             android:exported="true" />
         <activity
@@ -42,6 +47,7 @@
             android:exported="true" />
         <activity
             android:name=".loginstart"
+            android:exported="true" />
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
