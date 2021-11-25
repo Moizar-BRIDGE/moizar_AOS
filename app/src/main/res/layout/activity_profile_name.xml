@@ -45,14 +45,13 @@
             android:textSize="23sp" />
         <TextView
             android:id="@+id/profilename_text"
-            android:layout_width="195dp"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="170dp"
             android:fontFamily="@font/notosans_medium"
             android:gravity="center"
-            android:text="사용자 이름과
-             프로필을 설정해주세요"
+            android:text="사용자 이름과 프로필을 설정해주세요"
             android:textColor="@color/Step1_color"
             android:textSize="20sp" />
         <de.hdodenhof.circleimageview.CircleImageView
