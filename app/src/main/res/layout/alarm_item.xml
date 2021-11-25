@@ -13,8 +13,8 @@
         android:paddingVertical="10dp">
         <ImageView
             android:id="@+id/notifi"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/ic_notification2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:text="조재원"
             android:layout_marginLeft="30dp"
+            android:includeFontPadding="false"
             android:textSize="14sp"
             android:textColor="#0063F7"
             android:fontFamily="@font/notosans_regular"
@@ -35,6 +36,7 @@
             android:id="@+id/name_after"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:includeFontPadding="false"
             android:text="님으로부터 온 초대 알림입니다."
             android:layout_marginLeft="5dp"
             android:textSize="14sp"

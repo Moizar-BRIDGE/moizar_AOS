@@ -24,34 +24,37 @@
 
         <TextView
             android:id="@+id/madetext"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
+            android:includeFontPadding="false"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/notosans_bold"
-            android:text="자신만의 프로필을 만들어보세요"
+            android:text="자신만의 \n프로필을 만들어보세요"
             android:textColor="@color/black"
             android:textSize="25sp"/>
 
         <TextView
             android:id="@+id/step_1"
-            android:layout_width="78dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="110dp"
+            android:includeFontPadding="false"
             android:fontFamily="@font/notosans_medium"
             android:text="Step 1"
             android:textColor="@color/Step1_color"
             android:textSize="23sp" />
         <TextView
             android:id="@+id/profilename_text"
-            android:layout_width="190dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="170dp"
+            android:includeFontPadding="false"
             android:fontFamily="@font/notosans_medium"
             android:gravity="center"
-            android:text="사용자 이름과 프로필을 설정해주세요"
+            android:text="사용자 이름과\n프로필을 설정해주세요"
             android:textColor="@color/Step1_color"
             android:textSize="20sp" />
         <de.hdodenhof.circleimageview.CircleImageView
@@ -94,12 +97,13 @@
             />
         <TextView
             android:id="@+id/user_name_num"
-            android:layout_width="40dp"
-            android:layout_height="21dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="0/5자"
             android:layout_marginTop="140dp"
             android:layout_marginLeft="95dp"
+            android:includeFontPadding="false"
             android:textSize="12sp"
             android:gravity="center_horizontal|top"
             />

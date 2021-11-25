@@ -35,7 +35,7 @@
 
     <TextView
         android:id="@+id/last_chat"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:includeFontPadding="false"
         android:text="앞으로 잘 부탁드립니다~~"

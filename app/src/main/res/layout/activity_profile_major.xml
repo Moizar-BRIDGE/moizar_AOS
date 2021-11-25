@@ -8,14 +8,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <FrameLayout
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
             <View
                 android:id="@+id/ellipse_68"
@@ -27,46 +25,50 @@
 
             <TextView
                 android:id="@+id/madetext"
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/notosans_bold"
-                android:text="자신만의 프로필을 만들어보세요"
+                android:includeFontPadding="false"
+                android:text="자신만의 프로필을\n만들어보세요"
                 android:textColor="@color/black"
                 android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/step_2"
-                android:layout_width="78dp"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="110dp"
                 android:fontFamily="@font/notosans_medium"
+                android:includeFontPadding="false"
                 android:text="Step 2"
                 android:textColor="@color/Step1_color"
                 android:textSize="23sp" />
 
             <TextView
                 android:id="@+id/profile_major_text"
-                android:layout_width="240dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="170dp"
                 android:fontFamily="@font/notosans_medium"
                 android:gravity="center"
-                android:text="나를 어필할 수 있는 간단한 자기소개를 해주세요"
+                android:includeFontPadding="false"
+                android:text="나를 어필할 수 있는\n간단한 자기소개를 해주세요"
                 android:textColor="@color/Step1_color"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/college_name"
-                android:layout_width="78dp"
-                android:layout_height="36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
                 android:layout_marginLeft="60dp"
                 android:layout_marginBottom="40dp"
                 android:fontFamily="@font/notosans_medium"
+                android:includeFontPadding="false"
                 android:text="학교명"
                 android:textColor="@color/black" />
 
@@ -83,12 +85,13 @@
 
             <TextView
                 android:id="@+id/major"
-                android:layout_width="78dp"
-                android:layout_height="36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="60dp"
                 android:fontFamily="@font/notosans_medium"
+                android:includeFontPadding="false"
                 android:text="전공"
                 android:textColor="@color/black" />
 
@@ -106,12 +109,13 @@
 
             <TextView
                 android:id="@+id/email"
-                android:layout_width="78dp"
-                android:layout_height="36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="160dp"
                 android:fontFamily="@font/notosans_medium"
+                android:includeFontPadding="false"
                 android:text="이메일"
                 android:textColor="@color/black" />
 
@@ -143,16 +147,16 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:layout_marginRight="55dp"
                 android:layout_marginTop="630dp"
+                android:layout_marginRight="55dp"
                 android:background="@drawable/solid_button"
                 android:text="다음"
                 app:backgroundTint="@null" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="690dp"
-                />
+                android:layout_marginTop="690dp" />
         </FrameLayout>
     </ScrollView>
 
