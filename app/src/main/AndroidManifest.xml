@@ -19,6 +19,20 @@
         <activity
             android:name=".TeamsWriteActivity"
             android:exported="false" />
+            android:name=".Profile_myappeal"
+            android:exported="true" />
+        <activity
+            android:name=".Profile_interested_etc_direct"
+            android:exported="true" />
+        <activity
+            android:name=".Profile_interested_etc"
+            android:exported="true" />
+        <activity
+            android:name=".Profile_interested_marketing"
+            android:exported="true" />
+        <activity
+            android:name=".Profile_interested_developer"
+            android:exported="true" />
         <activity
             android:name=".Profile_interested_design"
             android:exported="true" />
@@ -34,6 +48,13 @@
         <activity
             android:name=".loginstart"
             android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Splash"
             android:exported="true" />
