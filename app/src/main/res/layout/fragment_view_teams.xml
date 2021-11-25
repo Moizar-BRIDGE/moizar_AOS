@@ -2,26 +2,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewTeamsFragment">
+    android:layout_width="match_parent">
 
     <com.amar.library.ui.StickyScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/sticky_scroll_teams"
         app:layout_constraintTop_toTopOf="parent"
-        app:stickyHeader="@id/titleLayout">
+        app:stickyHeader="@id/titleLayout"
+        tools:context=".ViewTeamsFragment">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_teams_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/teams_view_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -29,7 +30,9 @@
                 android:includeFontPadding="false"
                 android:text="팀 구하기"
                 android:textColor="@color/black"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:id="@+id/titleLayout"
@@ -38,7 +41,10 @@
                 android:background="@color/white"
                 android:gravity="bottom"
                 android:orientation="horizontal"
-                android:paddingBottom="5dp">
+                android:paddingBottom="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teams_view_title">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/search_team"
@@ -70,13 +76,15 @@
                     android:layout_weight="1" />
 
                 <ImageButton
+                    android:id="@+id/teams_search_filter"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginEnd="18dp"
                     android:layout_marginBottom="3dp"
                     android:background="@drawable/btn_search_filter"
                     android:elevation="1dp"
-                    android:src="@drawable/ic_search_filter" />
+                    android:src="@drawable/ic_search_filter"
+                    android:transitionName="shared_element_container" />
 
             </LinearLayout>
 
@@ -85,7 +93,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:background="@color/white"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleLayout">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -124,8 +135,141 @@
                     android:layout_height="wrap_content"
                     android:overScrollMode="never"
                     android:scrollbars="none" />
-            </LinearLayout>
-        </LinearLayout>
 
+            </LinearLayout>
+
+            <View
+                android:id="@+id/filter_btn_scrim"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:visibility="invisible" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/filter_scrim_view"
+                android:layout_width="350dp"
+                android:layout_height="400dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/filter_teams_view"
+                android:elevation="6dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@id/titleLayout"
+                app:layout_constraintTop_toTopOf="@id/titleLayout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:id="@+id/scrim_view_clear_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/no_color"
+                            android:src="@drawable/ic_clear" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosans_bold"
+                        android:includeFontPadding="false"
+                        android:text="선택 카테고리"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/selected_chip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="#2500F7" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/notosans_regular"
+                            android:includeFontPadding="false"
+                            android:text="인문 및 경영"
+                            android:textSize="14sp" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/inmun_chipGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.chip.Chip
+                                style="@style/Teams_Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="기획/아이디어"
+                                app:chipStrokeColor="#2500F7"
+                                app:chipStrokeWidth="1dp"
+                                app:rippleColor="@color/no_color" />
+
+                            <com.google.android.material.chip.Chip
+                                style="@style/Teams_Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="광고/마케팅"
+                                app:chipStrokeColor="#2500F7"
+                                app:chipStrokeWidth="1dp" />
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/white"
+                                android:text="취업/창업"
+                                app:chipStrokeColor="#2500F7"
+                                app:chipStrokeWidth="1dp" />
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/white"
+                                android:text="문학/글/시나리오"
+                                app:chipStrokeColor="#2500F7"
+                                app:chipStrokeWidth="1dp" />
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/white"
+                                android:text="논문/리포트"
+                                app:chipStrokeColor="#2500F7"
+                                app:chipStrokeWidth="1dp" />
+
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </com.amar.library.ui.StickyScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

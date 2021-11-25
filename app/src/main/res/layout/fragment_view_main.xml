@@ -38,19 +38,10 @@
                     android:textSize="18sp"
                     app:layout_constraintLeft_toLeftOf="parent" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/notosans_regular"
-                    android:includeFontPadding="false"
-                    android:text="더보기"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.example.moizar.MainTeamsBtnView
+                android:id="@+id/swipe_teams_tab_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -58,11 +49,6 @@
                 android:layout_marginRight="16dp"
                 android:background="@drawable/btn_main_teams"
                 android:elevation="10dp" />
-            <!--            <ImageButton-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:backgroundTint="@color/no_color"-->
-            <!--                android:src="@drawable/img_teams_btn"/>-->
 
             <androidx.legacy.widget.Space
                 android:layout_width="match_parent"
@@ -84,6 +70,7 @@
                     app:layout_constraintLeft_toLeftOf="parent" />
 
                 <TextView
+                    android:id="@+id/swipe_profile_tab_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/notosans_regular"
@@ -122,6 +109,7 @@
                     app:layout_constraintLeft_toLeftOf="parent" />
 
                 <TextView
+                    android:id="@+id/swipe_competitions_tab_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/notosans_regular"
