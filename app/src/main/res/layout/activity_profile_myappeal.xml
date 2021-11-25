@@ -49,8 +49,7 @@
             android:layout_marginTop="170dp"
             android:fontFamily="@font/notosans_medium"
             android:gravity="center"
-            android:text="나를 어필할 수 있는
-            간단한 자기소개를 해주세요"
+            android:text="나를 어필할 수 있는 간단한 자기소개를 해주세요"
             android:textColor="@color/Step1_color"
             android:textSize="20sp" />
         <EditText

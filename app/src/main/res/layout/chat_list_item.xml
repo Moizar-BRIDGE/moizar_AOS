@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginTop="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp">
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="조재원"
+        android:layout_marginLeft="20dp"
+        android:textSize="17sp"
+        android:textColor="#262933"
+        android:fontFamily="@font/notosans_regular"
+        app:layout_constraintLeft_toRightOf="@id/user_image"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/last_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="앞으로 잘 부탁드립니다~~"
+        android:layout_marginLeft="20dp"
+        android:textColor="#8A8E9C"
+        android:fontFamily="@font/notosans_regular"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/user_image"
+        app:layout_constraintTop_toBottomOf="@id/name"/>
+
+    <TextView
+        android:id="@+id/last_chat_time"
+        android:includeFontPadding="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:36"
+        android:textSize="13sp"
+        android:fontFamily="@font/notosans_regular"
+        android:textColor="#0063FB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+    <TextView
+        android:id="@+id/last_chat_num"
+        android:includeFontPadding="false"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="1"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/solid_button"
+        app:layout_constraintTop_toBottomOf="@id/last_chat_time"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
