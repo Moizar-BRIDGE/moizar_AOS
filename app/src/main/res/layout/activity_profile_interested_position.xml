@@ -8,11 +8,8 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:transitionName="imageTransition5"
-        android:layout_marginBottom="541dp"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,73 +19,53 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/solid_view" />
 
         <TextView
             android:id="@+id/madetext"
             android:layout_width="200dp"
-            android:layout_height="90dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/notosans_bold"
             android:text="자신만의 프로필을 만들어보세요"
             android:textColor="@color/black"
-            android:textSize="25sp" />
-    </FrameLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
-
+            android:textSize="25sp"/>
         <TextView
             android:id="@+id/step_3"
             android:layout_width="78dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginLeft="30dp"
+            android:layout_marginTop="110dp"
             android:fontFamily="@font/notosans_medium"
             android:text="Step 3"
             android:textColor="@color/Step1_color"
             android:textSize="23sp" />
 
         <TextView
-            android:id="@+id/major_text"
-            android:layout_width="215dp"
+            android:layout_width="195dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="170dp"
             android:fontFamily="@font/notosans_medium"
-            android:gravity="center_horizontal|top"
-            android:text="내가 관심있는
-                 포지션은 어디인가요?"
+            android:gravity="center"
+            android:text="사용자 이름과
+             프로필을 설정해주세요"
             android:textColor="@color/Step1_color"
             android:textSize="20sp" />
-    </LinearLayout>
-
-    <FrameLayout
-        android:id="@+id/frameLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
-
         <ImageButton
             android:id="@+id/design_button"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:elevation="3dp"
             android:transitionName="imageTransition"
-            android:layout_marginStart="40dp"
             android:background="@drawable/cardbuttonselect"
-            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
             android:clickable="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="95dp"
             android:fontFamily="@font/notosans_medium"
-            android:gravity="center"
             android:textSize="20sp" />
         <TextView
             android:id="@+id/design_text"
@@ -96,10 +73,10 @@
             android:layout_height="wrap_content"
             android:transitionName="imageTransition6"
             android:elevation="3dp"
-            android:layout_marginStart="85dp"
-            android:layout_marginTop="95dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="95dp"
             android:fontFamily="@font/notosans_medium"
-            android:gravity="center"
             android:text="디자인"
             android:textSize="20sp" />
         <ImageButton
@@ -107,10 +84,11 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:elevation="3dp"
+            android:layout_marginBottom="30dp"
             android:transitionName="imageTransition2"
-            android:layout_marginStart="225dp"
             android:background="@drawable/cardbuttonselect"
-            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="95dp"
             android:clickable="true"
             android:fontFamily="@font/notosans_medium"
             android:gravity="center"
@@ -120,9 +98,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="3dp"
+            android:layout_marginBottom="30dp"
             android:transitionName="imageTransition7"
-            android:layout_marginStart="270dp"
-            android:layout_marginTop="95dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="95dp"
             android:fontFamily="@font/notosans_medium"
             android:gravity="center"
             android:text="개발자"
@@ -133,9 +112,10 @@
             android:layout_height="150dp"
             android:elevation="3dp"
             android:transitionName="imageTransition3"
-            android:layout_marginStart="40dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="95dp"
+            android:layout_marginTop="155dp"
             android:background="@drawable/cardbuttonselect"
-            android:layout_marginTop="230dp"
             android:clickable="true"
             android:fontFamily="@font/notosans_medium"
             android:gravity="center"
@@ -146,8 +126,9 @@
             android:layout_height="wrap_content"
             android:elevation="3dp"
             android:transitionName="imageTransition8"
-            android:layout_marginStart="65dp"
-            android:layout_marginTop="275dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="95dp"
+            android:layout_marginTop="155dp"
             android:fontFamily="@font/notosans_medium"
             android:gravity="center"
             android:text="기획/마케팅"
@@ -158,9 +139,10 @@
             android:layout_height="150dp"
             android:elevation="3dp"
             android:transitionName="imageTransition4"
-            android:layout_marginStart="225dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="155dp"
             android:background="@drawable/cardbuttonselect"
-            android:layout_marginTop="230dp"
             android:clickable="true"
             android:fontFamily="@font/notosans_medium"
             android:gravity="center"
@@ -171,29 +153,19 @@
             android:layout_height="wrap_content"
             android:elevation="3dp"
             android:transitionName="imageTransition9"
-            android:layout_marginStart="280dp"
-            android:layout_marginTop="275dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="155dp"
             android:fontFamily="@font/notosans_medium"
             android:gravity="center"
             android:text="기타"
             android:textSize="20sp" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frameLayout5"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
-
         <Button
             android:id="@+id/step_3_before"
             android:layout_width="120dp"
             android:layout_height="44dp"
-            android:layout_marginLeft="60dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="650dp"
             android:background="@drawable/solid_button"
             android:text="이전"
             android:textColor="@color/black"
@@ -203,10 +175,11 @@
             android:id="@+id/step_3_next"
             android:layout_width="120dp"
             android:layout_height="44dp"
-            android:layout_marginLeft="240dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="650dp"
             android:background="@drawable/solid_button"
             android:text="다음"
             app:backgroundTint="@null" />
     </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
