@@ -1,5 +1,6 @@
 package com.example.moizar
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,7 @@ import com.google.android.material.chip.ChipGroup
 class Profile_interested_etc_direct : AppCompatActivity() {
     private lateinit var direc_edit: EditText
     private lateinit var completebutton: Button
+    private lateinit var dir_before_btn: Button
     private var chipnum: Int = 0
     private var textnum : Int = 0
     private lateinit var edit_num : TextView
@@ -29,6 +31,12 @@ class Profile_interested_etc_direct : AppCompatActivity() {
         chipGroup = findViewById(R.id.chipGroup)
         direc_edit = findViewById(R.id.direc_edit)
         completebutton = findViewById(R.id.completebutton)
+        dir_before_btn = findViewById(R.id.dir_before_btn)
+        dir_before_btn.setOnClickListener {
+            val intent = Intent(this, Profile_interested_etc::class.java)
+            startActivity(intent)
+            finish()
+        }
         edit_set()
     }
     private fun edit_set() {

@@ -43,7 +43,9 @@ class Profile_interested_position : AppCompatActivity() {
         etc_text = findViewById(R.id.etc_text)
 
         nextButton.setOnClickListener {
-
+            val intent = Intent(this, Profile_myappeal::class.java)
+            startActivity(intent)
+            finish()
         }
 
         design_button.setOnClickListener{
@@ -136,7 +138,9 @@ class Profile_interested_position : AppCompatActivity() {
 
         }
         beforeButton.setOnClickListener {
-
+            val intent = Intent(this, Profile_Major::class.java)
+            startActivity(intent)
+            finish()
         }
-        }
+    }
 }

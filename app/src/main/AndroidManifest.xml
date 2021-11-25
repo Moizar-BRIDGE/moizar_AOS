@@ -14,11 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
         <activity
+            android:name=".Profile_myappeal"
+            android:exported="true" />
+        <activity
             android:name=".Profile_interested_etc_direct"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|adjustPan"
-            />
+            android:exported="true" />
         <activity
             android:name=".Profile_interested_etc"
             android:exported="true" />
