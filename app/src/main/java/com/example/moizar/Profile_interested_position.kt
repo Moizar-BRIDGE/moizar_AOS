@@ -18,11 +18,6 @@ import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
 class Profile_interested_position : AppCompatActivity() {
     private lateinit var nextButton: Button
     private lateinit var beforeButton: Button
-    private  var chip0 : CharSequence = ""
-    private  var chip1 : CharSequence = ""
-    private  var chip2 : CharSequence = ""
-    private  var chip3 : CharSequence = ""
-    private  var chip4 : CharSequence = ""
     private lateinit var design_button: ImageButton
     private lateinit var design_text: TextView
     private lateinit var developer_button: ImageButton
@@ -46,28 +41,11 @@ class Profile_interested_position : AppCompatActivity() {
         marketing_text = findViewById(R.id.marketing_text)
         etc_button = findViewById(R.id.etc_button)
         etc_text = findViewById(R.id.etc_text)
-        chip0 = intent.getCharSequenceExtra("chip0")!!
-        chip1 = intent.getCharSequenceExtra("chip1")!!
-        chip2 = intent.getCharSequenceExtra("chip2")!!
-        chip3 = intent.getCharSequenceExtra("chip3")!!
-        chip4 = intent.getCharSequenceExtra("chip4")!!
 
         nextButton.setOnClickListener {
-            if(developer_button.isSelected){
-                val intent = Intent(this, Profile_Name::class.java)
-                startActivity(intent)
-                finish()
-            }
-            if(marketing_button.isSelected){
-                val intent = Intent(this, Profile_Name::class.java)
-                startActivity(intent)
-                finish()
-            }
-            if(etc_button.isSelected){
-                val intent = Intent(this, Profile_Name::class.java)
-                startActivity(intent)
-                finish()
-            }
+            val intent = Intent(this, Profile_myappeal::class.java)
+            startActivity(intent)
+            finish()
         }
 
         design_button.setOnClickListener{
@@ -89,11 +67,6 @@ class Profile_interested_position : AppCompatActivity() {
                 )
                 design_button.isSelected = false
                 design_text.setTextColor(Color.GRAY)
-                intent.putExtra("chip0", chip0);
-                intent.putExtra("chip1", chip1);
-                intent.putExtra("chip2", chip2);
-                intent.putExtra("chip3", chip3);
-                intent.putExtra("chip4", chip4);
                 startActivity(intent, options.toBundle())
                 Handler().postDelayed({finish() }, 2000)
             }
@@ -108,12 +81,12 @@ class Profile_interested_position : AppCompatActivity() {
             etc_text.setTextColor(Color.GRAY)
             if( developer_button.isSelected){
                 developer_text.setTextColor(ContextCompat.getColor(applicationContext!!,R.color.step3_text_color))
-                val intent = Intent(this, Profile_interested_design::class.java)
+                val intent = Intent(this, Profile_interested_developer::class.java)
                 var options : ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
                     this,
-                    Pair.create(developer_button, "imageTransition"),
-                    Pair.create(developer_text, "imageTransition1"),
-                    Pair.create(frame, "imageTransition2"),
+                    Pair.create(developer_button, "imageTransition2"),
+                    Pair.create(developer_text, "imageTransition7"),
+                    Pair.create(frame, "imageTransition5"),
                 )
                 startActivity(intent, options.toBundle())
                 Handler().postDelayed({finish() }, 2000)
@@ -130,12 +103,12 @@ class Profile_interested_position : AppCompatActivity() {
             etc_text.setTextColor(Color.GRAY)
             if( marketing_button.isSelected){
                 marketing_text.setTextColor(ContextCompat.getColor(applicationContext!!,R.color.step3_text_color))
-                val intent = Intent(this, Profile_interested_design::class.java)
+                val intent = Intent(this, Profile_interested_marketing::class.java)
                 var options : ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
                     this,
-                    Pair.create(marketing_button, "imageTransition"),
-                    Pair.create(marketing_text, "imageTransition1"),
-                    Pair.create(frame, "imageTransition2"),
+                    Pair.create(marketing_button, "imageTransition3"),
+                    Pair.create(marketing_text, "imageTransition8"),
+                    Pair.create(frame, "imageTransition5"),
                 )
                 startActivity(intent, options.toBundle())
                 Handler().postDelayed({finish() }, 2000)
@@ -152,13 +125,12 @@ class Profile_interested_position : AppCompatActivity() {
             marketing_text.setTextColor(Color.GRAY)
             if( etc_button.isSelected){
                 etc_text.setTextColor(ContextCompat.getColor(applicationContext!!,R.color.step3_text_color))
-                marketing_text.setTextColor(ContextCompat.getColor(applicationContext!!,R.color.step3_text_color))
-                val intent = Intent(this, Profile_interested_design::class.java)
+                val intent = Intent(this, Profile_interested_etc::class.java)
                 var options : ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(
                     this,
-                    Pair.create(etc_button, "imageTransition"),
-                    Pair.create(etc_text, "imageTransition1"),
-                    Pair.create(frame, "imageTransition2"),
+                    Pair.create(etc_button, "imageTransition4"),
+                    Pair.create(etc_text, "imageTransition9"),
+                    Pair.create(frame, "imageTransition5"),
                 )
                 startActivity(intent, options.toBundle())
                 Handler().postDelayed({finish() }, 2000)
@@ -166,7 +138,9 @@ class Profile_interested_position : AppCompatActivity() {
 
         }
         beforeButton.setOnClickListener {
-
+            val intent = Intent(this, Profile_Major::class.java)
+            startActivity(intent)
+            finish()
         }
-        }
+    }
 }

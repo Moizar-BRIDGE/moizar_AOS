@@ -4,193 +4,157 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile_Major">
+    tools:context=".Profile_interested_marketing">
 
     <ScrollView
-        android:id="@+id/scrollView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
-        <LinearLayout
-            android:id="@+id/linearLayout8"
+        <FrameLayout
+            android:id="@+id/frameLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            >
 
-            <FrameLayout
-                android:id="@+id/frameLayout"
+            <View
+                android:id="@+id/ellipse_68"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/solid_view" />
+
+            <TextView
+                android:id="@+id/madetext"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/notosans_bold"
+                android:text="자신만의 프로필을 만들어보세요"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/step_2"
+                android:layout_width="78dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="110dp"
+                android:fontFamily="@font/notosans_medium"
+                android:text="Step 2"
+                android:textColor="@color/Step1_color"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/profile_major_text"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="170dp"
+                android:fontFamily="@font/notosans_medium"
+                android:gravity="center"
+                android:text="나를 어필할 수 있는
+            간단한 자기소개를 해주세요"
+                android:textColor="@color/Step1_color"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/college_name"
+                android:layout_width="78dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="60dp"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/notosans_medium"
+                android:text="학교명"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/college_name_edit"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/square_border"
+                android:fontFamily="@font/notosans_regular"
+                android:hint="학교 이름을 입력하세요."
+                android:paddingLeft="5dp"
+                android:textColorHint="@color/edit_color" />
+
+            <TextView
+                android:id="@+id/major"
+                android:layout_width="78dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/notosans_medium"
+                android:text="전공"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/major_edit"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/square_border"
+                android:fontFamily="@font/notosans_regular"
+                android:hint="전공을 입력하세요."
+                android:paddingLeft="5dp"
+                android:textColorHint="@color/edit_color" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="78dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="160dp"
+                android:fontFamily="@font/notosans_medium"
+                android:text="이메일"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/email_edit"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/square_border"
+                android:fontFamily="@font/notosans_regular"
+                android:hint="이메일을 입력하세요."
+                android:paddingLeft="5dp"
+                android:textColorHint="@color/edit_color" />
+
+            <Button
+                android:id="@+id/step_2_before"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="630dp"
+                android:background="@drawable/solid_button"
+                android:text="이전"
+                android:textColor="@color/black"
+                app:backgroundTint="#FFEAEAEA" />
+
+            <Button
+                android:id="@+id/step_2_next"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="55dp"
+                android:layout_marginTop="630dp"
+                android:background="@drawable/solid_button"
+                android:text="다음"
+                app:backgroundTint="@null" />
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <View
-                    android:id="@+id/ellipse_68"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="56dp"
-                    android:background="@drawable/solid_view" />
-
-                <TextView
-                    android:id="@+id/madetext"
-                    android:layout_width="200dp"
-                    android:layout_height="90dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="56dp"
-                    android:fontFamily="@font/notosans_bold"
-                    android:text="자신만의 프로필을 만들어보세요"
-                    android:textColor="@color/black"
-                    android:textSize="25sp" />
-            </FrameLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/step_2"
-                    android:layout_width="78dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:fontFamily="@font/notosans_medium"
-                    android:text="Step 2"
-                    android:textColor="@color/Step1_color"
-                    android:textSize="23sp" />
-
-                <TextView
-                    android:id="@+id/major_text"
-                    android:layout_width="215dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:fontFamily="@font/notosans_medium"
-                    android:gravity="center_horizontal|top"
-                    android:text="학교 및 전공
-                    이메일을 채워 넣어주세요"
-                    android:textColor="@color/Step1_color"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <FrameLayout
-                android:id="@+id/frameLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginTop="5dp">
-
-                <TextView
-                    android:id="@+id/college_name"
-                    android:layout_width="78dp"
-                    android:layout_height="36dp"
-                    android:layout_marginLeft="55dp"
-                    android:fontFamily="@font/notosans_medium"
-                    android:text="학교명"
-                    android:textColor="@color/black" />
-
-                <EditText
-                    android:id="@+id/college_name_edit"
-                    android:layout_width="290dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center|left"
-                    android:layout_marginLeft="55dp"
-                    android:paddingLeft="5dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/square_border"
-                    android:fontFamily="@font/notosans_regular"
-                    android:hint="학교 이름을 입력하세요."
-                    android:textColorHint="@color/edit_color" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/frameLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/major"
-                    android:layout_width="78dp"
-                    android:layout_height="36dp"
-                    android:layout_marginLeft="55dp"
-                    android:fontFamily="@font/notosans_medium"
-                    android:text="전공"
-                    android:textColor="@color/black" />
-
-                <EditText
-                    android:id="@+id/major_edit"
-                    android:layout_width="290dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center|left"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    android:paddingLeft="5dp"
-                    android:background="@drawable/square_border"
-                    android:fontFamily="@font/notosans_regular"
-                    android:hint="전공을 입력하세요."
-                    android:textColorHint="@color/edit_color" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/frameLayout4"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/email"
-                    android:layout_width="78dp"
-                    android:layout_height="36dp"
-                    android:layout_marginLeft="55dp"
-                    android:fontFamily="@font/notosans_medium"
-                    android:text="이메일"
-                    android:textColor="@color/black" />
-
-                <EditText
-                    android:id="@+id/email_edit"
-                    android:layout_width="290dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center|left"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    android:paddingLeft="5dp"
-                    android:background="@drawable/square_border"
-                    android:fontFamily="@font/notosans_regular"
-                    android:hint="이메일을 입력하세요."
-                    android:textColorHint="@color/edit_color" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/frameLayout5"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="80dp">
-
-                <Button
-                    android:id="@+id/step_2_before"
-                    android:layout_width="120dp"
-                    android:layout_height="44dp"
-                    android:layout_marginLeft="60dp"
-                    android:background="@drawable/solid_button"
-                    android:text="이전"
-                    android:textColor="@color/black"
-                    app:backgroundTint="#FFEAEAEA" />
-
-                <Button
-                    android:id="@+id/step_2_next"
-                    android:layout_width="120dp"
-                    android:layout_height="44dp"
-                    android:layout_marginLeft="240dp"
-                    android:background="@drawable/solid_button"
-                    android:text="다음"
-                    app:backgroundTint="@null" />
-            </FrameLayout>
-        </LinearLayout>
+                android:layout_height="40dp"
+                android:layout_marginTop="690dp"
+                />
+        </FrameLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
