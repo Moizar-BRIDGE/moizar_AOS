@@ -29,7 +29,7 @@
             android:includeFontPadding="false"
             android:layout_gravity="center"
             android:fontFamily="@font/notosans_medium"
-            android:text="김예림"
+            android:text="조재원"
             android:textColor="@color/black"
             android:textSize="20sp"
            />

@@ -143,12 +143,12 @@ class Login : AppCompatActivity() {
             Log.d("123","${user.displayName}")
             val email = user.email!!.split("@")
             if(email[1] == "gmail.com"){
-                val intent = Intent(this, Profile_Name::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
             }
             else{
-                val intent = Intent(this, Profile_Name::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
             }
