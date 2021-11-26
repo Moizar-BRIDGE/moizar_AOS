@@ -10,16 +10,24 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
+import org.w3c.dom.Text
 
 class TeamsRecyclerAdapter(
-    val profileList: ProfileList,
+    val teamsList: TeamsModel,
     val activity: FragmentActivity?
 ) : RecyclerView.Adapter<TeamsRecyclerAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val personName: TextView
+        val competitionTag: TextView
+        val competitionDDay: TextView
+        val competitionName: TextView
+        val teamsTitle: TextView
 
         init {
-            personName = itemView.findViewById(R.id.competition_tag)
+            competitionTag = itemView.findViewById(R.id.competition_tag)
+            competitionDDay = itemView.findViewById(R.id.competition_dDay)
+            competitionName = itemView.findViewById(R.id.competition_name)
+            teamsTitle = itemView.findViewById(R.id.teams_title)
+
             itemView.setOnClickListener {
                 val teamsDetailIntent = Intent(activity, TeamsDetailActivity::class.java)
                 activity!!.startActivity(teamsDetailIntent)
@@ -69,10 +77,13 @@ class TeamsRecyclerAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.personName.setText(profileList.personList.get(position).name)
+        holder.competitionTag.setText(teamsList.teamsList.get(position).cateName)
+        holder.competitionDDay.setText("D-" + teamsList.teamsList.get(position).dDay)
+        holder.competitionName.setText(teamsList.teamsList.get(position).competitionName)
+        holder.teamsTitle.setText(teamsList.teamsList.get(position).teamsTitle)
     }
 
     override fun getItemCount(): Int {
-        return profileList.personList.size
+        return teamsList.teamsList.size
     }
 }

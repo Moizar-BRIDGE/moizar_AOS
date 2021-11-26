@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.coroutines.NonCancellable.isActive
 import me.everything.android.ui.overscroll.OverScrollDecoratorHelper
 
 class ViewMainFragment : Fragment(), View.OnClickListener {
@@ -53,14 +54,15 @@ class ViewMainFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
 //        프로필 둘러보기 RecyclerView 생성 부분
-        val profileList = createFakeProfileList(fakeNumber = 5)
+        val profileModel = createProfileList()
         listAdapter =
             ProfileRecyclerAdapter(
-                profileList = profileList
+                profileList = profileModel
             )
+        val competitionModel = createCompetitionList()
         listAdapter2 =
             CompetitionRecyclerAdapter(
-                profileList = profileList
+                competitionList = competitionModel
             )
 
         val profileList_recycler_view: RecyclerView =
@@ -82,7 +84,6 @@ class ViewMainFragment : Fragment(), View.OnClickListener {
             profileList_recycler_view,
             OverScrollDecoratorHelper.ORIENTATION_HORIZONTAL
         )
-
     }
 
 
@@ -127,33 +128,205 @@ class ViewMainFragment : Fragment(), View.OnClickListener {
 
 }
 
-fun createFakeProfileList(
-    fakeNumber: Int = 10,
-    profileList: ProfileList = ProfileList()
-): ProfileList {
-    profileList.addPerson(
-        ProfileDetail(
-            name = "" + "강석원",
-            part = "" + "분야",
-            school = "" + "공학대학교",
-            major = "" + "컴퓨터공학과",
+fun createProfileList(
+    profileModel: ProfileModel = ProfileModel()
+): ProfileModel {
+    profileModel.addPerson(
+        ProfileViewDetail(
+            uid = "gi6nXv8FwgPNnjQQku11fZbAUn23",
+            name = "오래영",
+            image = "https://moizaimage.s3.ap-northeast-2.amazonaws.com/KakaoTalk_20211125_234140400_02.jpg",
+            email = "nwj20315@gmail.com",
+            major = "컴퓨터공학",
+            part = "백엔드 개발",
+            school = "한국공학대학교",
+            resume = "백엔드 분야로 공모전에 나가고 싶은  컴퓨터공학 4학년입니다.",
+            experience = "프로보노 프로젝트 참여, AR 앱 개발",
+            isLiked = false
+        )
+    )
+    profileModel.addPerson(
+        ProfileViewDetail(
+            uid = "jRBzpwPd6KcU0yHEXiCp43CXGVv1",
+            name = "강석원",
+            image = "https://moizaimage.s3.ap-northeast-2.amazonaws.com/KakaoTalk_20211125_234140400_01.jpg",
+            email = "rkdtjrdnjs1@gmail.com",
+            major = "컴퓨터공학",
+            part = "안드로이드 개발",
+            school = "한국공학대학교",
+            resume = "컴퓨터공학을 전공하였으며 안드로이드에 관심이 많은 4학년입니다.",
+            experience = "프로보노 프로젝트 참여, AR 앱 개발",
+            isLiked = true
+        )
+    )
+    profileModel.addPerson(
+        ProfileViewDetail(
+            uid = "OiRLpqjWfxQMPN8cd5zHjI4b8ZV2",
+            name = "조재원",
+            image = "https://moizaimage.s3.ap-northeast-2.amazonaws.com/default.png",
+            email = "m970314@naver.com",
+            major = "경영학",
+            part = "서비스 기획",
+            school = "한국공학대학교",
+            resume = "경영 전공이며, 서비스, 사업개발 및 운영 기획을 맡을 수 있습니다.",
+            experience = "공모전 수상 경력 2회",
+            isLiked = true
+        )
+    )
+    profileModel.addPerson(
+        ProfileViewDetail(
+            uid = "OiRLpqjWfxQMPN8cd5zHjI4b8ZV2",
+            name = "김예림",
+            image = "https://moizaimage.s3.ap-northeast-2.amazonaws.com/KakaoTalk_20211125_234140400.jpg",
+            email = "m970314@naver.com",
+            major = "경영학",
+            part = "UI/UX 디자인",
+            school = "한국공학대학교",
+            resume = "경영 전공이며, 서비스, 사업개발 및 운영 기획을 맡을 수 있습니다.",
+            experience = "공모전 수상 경력 2회",
+            isLiked = false
+        )
+    )
+    profileModel.addPerson(
+        ProfileViewDetail(
+            uid = "OiRLpqjWfxQMPN8cd5zHjI4b8ZV2",
+            name = "박윤찬",
+            image = "https://moizaimage.s3.ap-northeast-2.amazonaws.com/default.png",
+            email = "m970314@naver.com",
+            major = "컴퓨터공학",
+            part = "웹 프론트엔드",
+            school = "한국공학대학교",
+            resume = "경영 전공이며, 서비스, 사업개발 및 운영 기획을 맡을 수 있습니다.",
+            experience = "공모전 수상 경력 2회",
+            isLiked = false
+        )
+    )
+    profileModel.addPerson(
+        ProfileViewDetail(
+            uid = "OiRLpqjWfxQMPN8cd5zHjI4b8ZV2",
+            name = "박상수",
+            image = "https://moizaimage.s3.ap-northeast-2.amazonaws.com/default.png",
+            email = "m970314@naver.com",
+            major = "경영학",
+            part = "서비스 기획",
+            school = "한국공학대학교",
+            resume = "경영 전공이며, 서비스, 사업개발 및 운영 기획을 맡을 수 있습니다.",
+            experience = "공모전 수상 경력 2회",
+            isLiked = false
+        )
+    )
+    profileModel.addPerson(
+        ProfileViewDetail(
+            uid = "OiRLpqjWfxQMPN8cd5zHjI4b8ZV2",
+            name = "김민규",
+            image = "https://moizaimage.s3.ap-northeast-2.amazonaws.com/default.png",
+            email = "m970314@naver.com",
+            major = "경영학",
+            part = "서비스 기획",
+            school = "한국공학대학교",
+            resume = "경영 전공이며, 서비스, 사업개발 및 운영 기획을 맡을 수 있습니다.",
+            experience = "공모전 수상 경력 2회",
+            isLiked = true
+        )
+    )
+    profileModel.addPerson(
+        ProfileViewDetail(
+            uid = "OiRLpqjWfxQMPN8cd5zHjI4b8ZV2",
+            name = "이승진",
+            image = "https://moizaimage.s3.ap-northeast-2.amazonaws.com/default.png",
+            email = "m970314@naver.com",
+            major = "경영학",
+            part = "서비스 기획",
+            school = "한국공학대학교",
+            resume = "경영 전공이며, 서비스, 사업개발 및 운영 기획을 맡을 수 있습니다.",
+            experience = "공모전 수상 경력 2회",
+            isLiked = true
+        )
+    )
+    profileModel.addPerson(
+        ProfileViewDetail(
+            uid = "OiRLpqjWfxQMPN8cd5zHjI4b8ZV2",
+            name = "강소연",
+            image = "https://moizaimage.s3.ap-northeast-2.amazonaws.com/default.png",
+            email = "m970314@naver.com",
+            major = "경영학",
+            part = "서비스 기획",
+            school = "한국공학대학교",
+            resume = "경영 전공이며, 서비스, 사업개발 및 운영 기획을 맡을 수 있습니다.",
+            experience = "공모전 수상 경력 2회",
+            isLiked = true
+        )
+    )
+
+    return profileModel
+}
+
+
+fun createCompetitionList(
+    competitionModel: CompetitionModel = CompetitionModel()
+): CompetitionModel {
+    competitionModel.addCompetition(
+        CompetitionDetail(
+            cNum = 11,
+            name = "하나투어 플래너 공모전",
+            image = "https://www.wevity.com/upload/contest/20211124032244_37c8c4c2.jpg",
+            dDay = "28",
+            cateName = "광고/마케팅",
             isActive = true,
             viewtype = 0
         )
     )
-    for (i in 1 until fakeNumber) {
-        profileList.addPerson(
-            ProfileDetail(
-                name = "" + i + "강석원",
-                part = "" + i + "분야",
-                school = "" + i + "공학대학교",
-                major = "" + i + "컴퓨터공학과",
-                isActive = false,
-                viewtype = 1
-            )
+    //1
+    competitionModel.addCompetition(
+        CompetitionDetail(
+            cNum = 12,
+            name = "LG디스플레이 대학생 인플루언서 디플 23기 모집",
+            image = "https://www.wevity.com/upload/contest/20211123091048_2e370062.png",
+            dDay = "30",
+            cateName = "디자인/캐릭터/웹툰",
+            isActive = false,
+            viewtype = 1
         )
-    }
-    return profileList
+    )
+
+//2
+    competitionModel.addCompetition(
+        CompetitionDetail(
+            cNum = 13,
+            name = "2021 기계독해 데이터셋 학습 알고리즘 개발대회",
+            image = "https://www.wevity.com/upload/contest/20211122182630_38867629.jpg",
+            dDay = "14",
+            cateName = "웹/모바일/IT",
+            isActive = false,
+            viewtype = 1
+        )
+    )
+//3
+    competitionModel.addCompetition(
+        CompetitionDetail(
+            cNum = 15,
+            name = "ifland 이프랜드 메타버스 크리에이터 챌린지",
+            image = "https://www.wevity.com/upload/contest/20211119190536_572cdd73.jpg",
+            dDay = "10",
+            cateName = "영상/UCC/사진",
+            isActive = false,
+            viewtype = 1
+        )
+    )
+//4
+    competitionModel.addCompetition(
+        CompetitionDetail(
+            cNum = 14,
+            name = "LG화학 청소년 환경지킴이 2기 모집",
+            image = "https://www.wevity.com/upload/contest/20211122152752_1d10483d.jpg",
+            dDay = "14",
+            cateName = "과학/공학",
+            isActive = false,
+            viewtype = 1
+        )
+    )
+
+    return competitionModel
 }
 
 ////삭제할거임

@@ -8,11 +8,28 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import android.content.ClipData.Item
 import android.util.Log
+import android.widget.ImageView
+import android.widget.TextView
+import com.bumptech.glide.Glide
 import java.lang.RuntimeException
 
-class CompetitionRecyclerAdapter(val profileList: ProfileList) :
+class CompetitionRecyclerAdapter(val competitionList: CompetitionModel) :
     RecyclerView.Adapter<CompetitionRecyclerAdapter.ViewHolder>() {
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val competitionImgView: ImageView
+        val cardSubtitle2: TextView
+        val competitionContent: TextView
+        val competitionCategory: TextView
+
+        init {
+            competitionImgView = itemView.findViewById(R.id.competition_img_view)
+            cardSubtitle2 = itemView.findViewById(R.id.card_subtitle2)
+            competitionContent = itemView.findViewById(R.id.competition_content)
+            competitionCategory = itemView.findViewById(R.id.competition_category)
+
+        }
+    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -43,7 +60,7 @@ class CompetitionRecyclerAdapter(val profileList: ProfileList) :
     }
 
     override fun getItemViewType(position: Int): Int {
-        return profileList.personList.get(position).viewtype
+        return competitionList.competitionList.get(position).viewtype
     }
 
     override fun onBindViewHolder(holder: CompetitionRecyclerAdapter.ViewHolder, position: Int) {
@@ -52,13 +69,20 @@ class CompetitionRecyclerAdapter(val profileList: ProfileList) :
         val lp = holder.itemView.layoutParams
         if (lp is StaggeredGridLayoutManager.LayoutParams) {
             val sglp = lp
-            sglp.isFullSpan = profileList.personList.get(position).isActive
+            sglp.isFullSpan = competitionList.competitionList.get(position).isActive
             holder.itemView.layoutParams = sglp
         }
+
+        Glide.with(holder.itemView.context)
+            .load(competitionList.competitionList.get(position).image)
+            .into(holder.competitionImgView)
+        holder.cardSubtitle2.setText("D-" + competitionList.competitionList.get(position).dDay)
+        holder.competitionContent.setText(competitionList.competitionList.get(position).name)
+        holder.competitionCategory.setText(competitionList.competitionList.get(position).cateName)
 
     }
 
     override fun getItemCount(): Int {
-        return profileList.personList.size
+        return competitionList.competitionList.size
     }
 }
