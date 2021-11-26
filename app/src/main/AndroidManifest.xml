@@ -15,31 +15,21 @@
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
         <activity
             android:name=".ChatActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
+        <activity
             android:name=".ProfileDetailActivity"
             android:exported="false" />
         <activity
             android:name=".AlarmDatail"
             android:exported="true" />
         <activity
-            android:exported="true"></activity>
-        <activity
             android:name=".ChatListActivity"
             android:exported="true" />
-            android:exported="true" />
-        <activity
-            android:name=".ChatListActivity"
-            android:exported="true" />
-        <activity
-            android:name=".TeamsDetailActivity"
-            android:exported="false" />
         <activity
             android:name=".TeamsWriteActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Profile_myappeal"
-
             android:exported="true" />
         <activity
             android:name=".Profile_interested_etc_direct"
@@ -64,8 +54,7 @@
             android:exported="true" />
         <activity
             android:name=".Profile_Name"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".loginstart"
             android:exported="true">
@@ -75,10 +64,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-            android:exported="true" />
-        <activity
-            android:name=".loginstart"
-            android:exported="true"></activity>
         <activity
             android:name=".Splash"
             android:exported="true" />
@@ -91,18 +76,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"></activity>
-            android:exported="true">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+    <meta-data
+        android:name="com.facebook.sdk.ApplicationId"
+        android:value="@string/facebook_app_id" />
+</application>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
-    </application>
-
-</manifest>
+    </manifest>
