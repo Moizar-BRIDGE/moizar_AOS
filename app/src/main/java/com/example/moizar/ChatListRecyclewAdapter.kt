@@ -9,8 +9,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
 class ChatListRecyclewAdapter(chatListActivity: ChatListActivity) : RecyclerView.Adapter<ChatListRecyclewAdapter.ViewHolder>() {
-
+    
     var datas = mutableListOf<ChatListdata>()
+    interface OnItemClickListener{
+        fun onItemClick(v:View, data: ChatListdata, pos : Int)
+    }
+    private var listener : OnItemClickListener? = null
+    fun setOnItemClickListener(listener : OnItemClickListener) {
+        this.listener = listener
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.chat_list_item,parent,false)
         return ViewHolder(view)
@@ -36,6 +43,13 @@ class ChatListRecyclewAdapter(chatListActivity: ChatListActivity) : RecyclerView
             last_chat.text = item.last_chat
             last_chat_time.text = item.last_chat_time
             Glide.with(itemView).load(item.user_image).into(user_image)
+            val pos = adapterPosition
+            if(pos!= RecyclerView.NO_POSITION)
+            {
+                itemView.setOnClickListener {
+                    listener?.onItemClick(itemView,item,pos)
+                }
+            }
         }
     }
 

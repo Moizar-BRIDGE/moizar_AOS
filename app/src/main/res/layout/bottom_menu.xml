@@ -5,7 +5,7 @@
     <item
         android:id="@+id/action_main"
         android:enabled="true"
-        android:icon="@drawable/ic_tab_teams"
+        android:icon="@drawable/ic_home"
         android:title="home"
         app:showAsAction="ifRoom" />
 
