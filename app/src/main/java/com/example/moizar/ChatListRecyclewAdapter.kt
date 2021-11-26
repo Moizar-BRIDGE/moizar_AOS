@@ -42,7 +42,7 @@ class ChatListRecyclewAdapter(chatListActivity: ChatListActivity) : RecyclerView
             last_chat_num.text = item.last_chat_num
             last_chat.text = item.last_chat
             last_chat_time.text = item.last_chat_time
-            Glide.with(itemView).load(item.user_image).into(user_image)
+            Glide.with(itemView).load(item.user_image).circleCrop().into(user_image)
             val pos = adapterPosition
             if(pos!= RecyclerView.NO_POSITION)
             {

@@ -30,9 +30,9 @@ class AlarmActivity : AppCompatActivity() {
         alarm_list.adapter = profileAdapter
 
         datas.apply {
-            add(Alarmdata(name = "조재원", name_after = "님으로부터 온 초대 알림입니다.", Alarm_detail = "2021년 초기창업패키지 온라인 창업 프로젝트 개발자로 모시고싶습니다.",notifi = R.drawable.ic_notification2,
+            add(Alarmdata(name = "Wanted", name_after = "님으로부터 온 지원 알림입니다.", Alarm_detail = "2021년 원티드 해,커리어 디자니어 지원을 희망합니다" ,notifi = R.drawable.ic_notification2,
                 clear = R.drawable.ic_clear))
-            add(Alarmdata(name = "김예림", name_after = "님으로부터 온 초대 알림입니다.", Alarm_detail = "2021년 공공 데이터 공모전 영상 편집가 지원을 희망합니다" ,notifi = R.drawable.ic_notification2,
+            add(Alarmdata(name = "김예림", name_after = "님으로부터 온 지원 알림입니다.", Alarm_detail = "2021년 공공 데이터 공모전 영상 편집가 지원을 희망합니다" ,notifi = R.drawable.ic_notification2,
                 clear = R.drawable.ic_clear))
             add(Alarmdata(name = "강석원", name_after = "님으로부터 온 초대 알림입니다.", Alarm_detail = "2021년 해커리어 안드로이드 개발자로 모시고싶습니다." ,notifi = R.drawable.ic_notification2,
                 clear = R.drawable.ic_clear))

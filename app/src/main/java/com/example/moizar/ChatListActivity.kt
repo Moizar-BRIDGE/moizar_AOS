@@ -30,10 +30,10 @@ class ChatListActivity : AppCompatActivity() {
 
 
         datas.apply {
-            add(ChatListdata(user_image = R.drawable.ic_moizar_logo, name = "조재원", last_chat_num = "1", last_chat = "앞으로 잘부탁드립니다~!", last_chat_time = "10:36 PM"))
-            add(ChatListdata(user_image = R.drawable.ic_moizar_logo, name = "강석원", last_chat_num = "4", last_chat = "맡겨만주세요. 제 실력 상당합니다.", last_chat_time = "1일"))
-            add(ChatListdata(user_image = R.drawable.ic_moizar_logo, name = "김예림", last_chat_num = "6", last_chat = "제가 그런부분까지 해야하나요?", last_chat_time = "7일"))
-            add(ChatListdata(user_image = R.drawable.ic_moizar_logo, name = "오래영", last_chat_num = "21", last_chat = "네. 다음 모임장소에서 뵐게요.", last_chat_time = "9월 23일"))
+            add(ChatListdata(user_image = R.drawable.ic_jaewon, name = "조재원", last_chat_num = "1", last_chat = "앞으로 잘부탁드립니다~!", last_chat_time = "10:36 PM"))
+            add(ChatListdata(user_image = R.drawable.suk, name = "강석원", last_chat_num = "4", last_chat = "맡겨만주세요. 제 실력 상당합니다.", last_chat_time = "1일"))
+            add(ChatListdata(user_image = R.drawable.rim, name = "김예림", last_chat_num = "6", last_chat = "제가 그런부분까지 해야하나요?", last_chat_time = "7일"))
+            add(ChatListdata(user_image = R.drawable.cut, name = "오래영", last_chat_num = "21", last_chat = "네. 다음 모임장소에서 뵐게요.", last_chat_time = "9월 23일"))
             profileAdapter.setOnItemClickListener(object : ChatListRecyclewAdapter.OnItemClickListener{
                 override fun onItemClick(v: View, data: ChatListdata, pos: Int) {
                     val intent = Intent(this@ChatListActivity, ChatActivity::class.java).apply{

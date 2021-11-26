@@ -66,7 +66,7 @@ class ChatActivity : AppCompatActivity() {
         profileAdapter = ChatRecyclewAdapter(this)
         chat_list.adapter = profileAdapter
             datas.apply {
-                add(ChatModelData(chat = "앞으로 잘 부탁 드립니다~!",image = R.drawable.ic_moizar_logo, name = "김예림", time = "10:36 PM", type = multi_type1))
+                add(ChatModelData(chat = "앞으로 잘 부탁 드립니다~!",image = R.drawable.ic_jaewon, name = "조재원", time = "10:36 PM", type = multi_type1))
                 profileAdapter.datas = datas
                 profileAdapter.notifyDataSetChanged()
         }

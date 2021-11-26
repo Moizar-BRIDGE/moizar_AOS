@@ -15,7 +15,7 @@ class AlarmDatail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_alarm_datail)
         user_image = findViewById(R.id.ellipse_68)
-        Glide.with(this).load(R.drawable.ic_moizar_logo).into(user_image)
+        Glide.with(this).load(R.drawable.img_profile_test).circleCrop().into(user_image)
         agree = findViewById(R.id.agree)
         disagree = findViewById(R.id.disagree)
         agree.setOnClickListener {

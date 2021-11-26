@@ -53,7 +53,7 @@
             android:fontFamily="@font/notosans_medium"
             android:includeFontPadding="false"
             android:gravity="center"
-            android:text="사용자 이름과\n프로필을 설정해주세요"
+            android:text="내가 관심있는\n포지션은 어디인가요?"
             android:textColor="@color/Step1_color"
             android:textSize="20sp" />
         <ImageButton
