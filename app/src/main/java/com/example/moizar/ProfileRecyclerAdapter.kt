@@ -7,15 +7,27 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
+import com.bumptech.glide.Glide
+import de.hdodenhof.circleimageview.CircleImageView
 
 class ProfileRecyclerAdapter(
-    val profileList: ProfileList,
+    val profileList: ProfileModel,
 ) : RecyclerView.Adapter<ProfileRecyclerAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val personName: TextView
+        val likeBtn: LottieAnimationView
+        val cardSubtitle2 : TextView
+        val schoolName : TextView
+        val majorName : TextView
+        val imageView : CircleImageView
 
         init {
             personName = itemView.findViewById(R.id.user_name)
+            likeBtn = itemView.findViewById(R.id.like_btn)
+            cardSubtitle2 = itemView.findViewById(R.id.card_subtitle2)
+            schoolName = itemView.findViewById(R.id.school_name)
+            majorName = itemView.findViewById(R.id.major_name)
+            imageView = itemView.findViewById(R.id.imageView)
         }
     }
 
@@ -58,10 +70,14 @@ class ProfileRecyclerAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.personName.setText(profileList.personList.get(position).name)
+        holder.personName.setText(profileList.profileList.get(position).name)
+        holder.cardSubtitle2.setText(profileList.profileList.get(position).part)
+        holder.schoolName.setText(profileList.profileList.get(position).school)
+        holder.majorName.setText(profileList.profileList.get(position).major)
+        Glide.with(holder.itemView.context).load(profileList.profileList.get(position).image).into(holder.imageView)
     }
 
     override fun getItemCount(): Int {
-        return profileList.personList.size
+        return profileList.profileList.size
     }
 }
