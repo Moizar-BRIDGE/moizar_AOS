@@ -5,6 +5,7 @@ import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -20,6 +21,12 @@ class TeamsDetailActivity : AppCompatActivity() {
 
         detailBackBtn.setOnClickListener {
             finish()
+        }
+
+        val teamsWriteBtn: Button = findViewById(R.id.teams_write_btn)
+        val teamsApplyIntent = Intent(this, TeamsDetailApplyActivity::class.java)
+        teamsWriteBtn.setOnClickListener {
+            startActivity(teamsApplyIntent)
         }
 
         //        프로필 둘러보기 RecyclerView 생성 부분

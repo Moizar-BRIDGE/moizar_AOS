@@ -14,13 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
         <activity
+            android:name=".TeamsDetailApplyActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChatActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ProfileDetailActivity"
             android:exported="false" />
         <activity
             android:name=".AlarmDatail"
+            android:exported="true" />
+        <activity
+            android:name=".TeamsDetailActivity"
             android:exported="true" />
         <activity
             android:name=".ChatListActivity"
@@ -54,7 +60,7 @@
             android:exported="true" />
         <activity
             android:name=".Profile_Name"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".loginstart"
             android:exported="true">
@@ -75,11 +81,11 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
-    <meta-data
-        android:name="com.facebook.sdk.ApplicationId"
-        android:value="@string/facebook_app_id" />
-</application>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+    </application>
 
-    </manifest>
+</manifest>
