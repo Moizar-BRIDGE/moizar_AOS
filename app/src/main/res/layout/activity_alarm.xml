@@ -22,6 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:includeFontPadding="false"
             android:fontFamily="@font/notosans_bold"
             android:text="알림"
             android:textColor="@color/black"
