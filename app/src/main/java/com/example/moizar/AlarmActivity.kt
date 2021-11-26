@@ -4,16 +4,24 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
 class AlarmActivity : AppCompatActivity() {
     lateinit var profileAdapter: AlarmRecyclewAdater
     private lateinit var alarm_list : RecyclerView
+    private lateinit var msg_btn : ImageView
     val datas = mutableListOf<Alarmdata>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_alarm)
+        msg_btn = findViewById(R.id.msg_ic)
         alarm_list = findViewById(R.id.alarm_list)
+        msg_btn.setOnClickListener {
+            val intent = Intent(this, ChatListActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         profileAdapter = AlarmRecyclewAdater(this)
         initRecycler()
     }

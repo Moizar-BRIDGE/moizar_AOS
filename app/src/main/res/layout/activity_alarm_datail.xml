@@ -205,7 +205,7 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout">
 
         <Button
-            android:id="@+id/step_2_before"
+            android:id="@+id/disagree"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -216,7 +216,7 @@
             app:backgroundTint="#FFEAEAEA" />
 
         <Button
-            android:id="@+id/step_2_next"
+            android:id="@+id/agree"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
