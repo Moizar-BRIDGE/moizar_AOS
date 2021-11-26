@@ -31,7 +31,8 @@ class ViewPeoplesFragment : Fragment() {
         val profileList = createFakeProfileList(fakeNumber = 35)
         listAdapter =
             ProfileRecyclerAdapter2(
-                profileList = profileList
+                profileList = profileList,
+                activity = getActivity()
             )
 
         val profileList_recycler_view: RecyclerView =
