@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -13,11 +15,24 @@ class MainActivity : AppCompatActivity() {
     private val fragmentViewPeoples by lazy { ViewPeoplesFragment() }
     private val fragmentViewCompetition by lazy { ViewCompetitionFragment() }
     private val fragmentMain by lazy { ViewMainFragment() }
-
+    private lateinit var massage : ImageButton
+    private lateinit var alarm : ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        massage = findViewById(R.id.msg_ic)
+        alarm = findViewById(R.id.notification_ic)
+        massage.setOnClickListener {
+            val intent = Intent(this, ChatListActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        alarm.setOnClickListener {
+            val intent = Intent(this, AlarmActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val customBottomNavigationView1: CustomBottomNavigationView1 =
             findViewById(R.id.customBottomBar)
