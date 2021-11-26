@@ -85,7 +85,7 @@ fun createTeamsList(
         TeamsDetail(
             tNum = 2,
             cNum = 31,
-            teamsTitle = "디자이너르 모집합니다.",
+            teamsTitle = "디자이너를 모집합니다.",
             competitionName = "2021 원티드 해,커리어",
             cateName = "기획/아이디어, 웹/모바일/IT,",
             dDay = "0",

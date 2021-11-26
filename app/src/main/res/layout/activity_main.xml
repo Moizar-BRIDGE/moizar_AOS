@@ -80,10 +80,11 @@
         app:srcCompat="@drawable/ic_write"
         app:tint="@color/white" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/img_profile_test"
         android:layout_marginBottom="30dp"
         android:backgroundTint="@color/floatingBtn_color"
         android:clickable="true"

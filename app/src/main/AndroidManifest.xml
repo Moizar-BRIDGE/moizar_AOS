@@ -20,6 +20,11 @@
         <activity
             android:name=".ChatActivity"
             android:exported="true"></activity>
+            android:name=".TeamsDetailApplyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="true" />
         <activity
             android:name=".ProfileDetailActivity"
             android:exported="false" />
@@ -28,16 +33,14 @@
             android:exported="true" />
         <activity
             android:name=".AlarmActivity"
+            android:name=".TeamsDetailActivity"
             android:exported="true" />
         <activity
             android:name=".ChatListActivity"
             android:exported="true" />
         <activity
-            android:name=".TeamsDetailActivity"
-            android:exported="false" />
-        <activity
             android:name=".TeamsWriteActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Profile_myappeal"
             android:exported="true" />
@@ -65,6 +68,7 @@
         <activity
             android:name=".Profile_Name"
             android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".loginstart"
             android:exported="true">
@@ -76,6 +80,9 @@
 
         </activity>
         <activity
+            android:name=".Splash"
+            android:exported="true" />
+        <activity
             android:name=".Logout"
             android:exported="true" />
         <activity
@@ -84,6 +91,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"></activity>
+            android:exported="true" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

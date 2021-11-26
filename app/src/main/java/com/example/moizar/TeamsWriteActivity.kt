@@ -2,6 +2,7 @@ package com.example.moizar
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class TeamsWriteActivity : AppCompatActivity() {
@@ -15,7 +16,9 @@ class TeamsWriteActivity : AppCompatActivity() {
         writeViewClearBtn.setOnClickListener {
             finish()
         }
-
-
+        val writeBtn: Button = findViewById(R.id.write_btn)
+        writeBtn.setOnClickListener {
+            finish()
+        }
     }
 }
